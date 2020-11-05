@@ -6,14 +6,17 @@ class Landing extends Component {
   render() {
     return (
       <div className="landing">
-        <p>
-          SoundlyInvest helps you make a sound real estate investment.
-        </p>
+        <h1>
+          SoundlyInvest
+        </h1>
+        <h3>
+          Soundly invest in real estate.
+        </h3>
         <form>
-          <label for="address">Enter an address: </label>
+          <label for="address">Start by entering an address: </label>
           <input type="text" name="address" />
           <Link to="/income">
-            <input type="submit" />
+            <input className="submit-button" type="submit" value="Next" />
           </Link>
         </form>
       </div>

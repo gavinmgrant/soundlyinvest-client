@@ -23,6 +23,54 @@ code {
     monospace;
 }
 
+h1 {
+  font-size: 40px;
+  margin: 30px;
+}
+
 form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:visited {
+  color: #000000;
+}
+
+input {
+  width: 100%;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  margin: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #000000;
+  border-radius: 100px;
+}
+
+button,
+.submit-button:hover {
+  cursor: pointer;
+}
+
+.submit-button {
+  width: 120px;
   margin: 20px;
 }

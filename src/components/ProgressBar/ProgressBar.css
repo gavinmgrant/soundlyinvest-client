@@ -1,21 +1,33 @@
 .progressbar-list {
     list-style-type: none;
     padding: 10px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .progressbar-item {
     display: inline;
-    padding: 5px;
+    padding: 3px;
 }
 
 .progressbar-item:hover {
     cursor: pointer;
 }
 
+.active {
+    border-bottom: 2px solid #000000;
+}
+
+.arrow {
+    margin: 3px;
+}
+
 @media screen and (min-width: 640px) {
     .progressbar-list {
         font-size: 17px;
         margin-right: 10px;
+    }
+
+    .arrow {
+        margin: 10px;
     }
 }

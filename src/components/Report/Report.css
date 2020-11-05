@@ -1,0 +1,32 @@
+.report {
+    padding: 120px 20px 60px 20px;
+}
+
+.report-table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #666666;
+    width: 80%;
+    max-width: 640px;
+}
+
+.report-title {
+    font-size: 28px;
+}
+
+.report-buttons {
+    text-align: center;
+    margin: 30px;
+}
+
+td,
+th {
+    border: 1px solid #666666;
+    padding: 5px;
+}
+  
+thead,
+tfoot {
+    background-color: #666666;
+    color: #fff;
+}
