@@ -1,0 +1,24 @@
+.header {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    background-color: #aaa;
+    margin: 0;
+}
+
+.title {
+    font-size: 22px;
+}
+
+@media screen and (min-width: 640px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title {
+        margin-left: 20px;
+        font-size: 24px;
+    }
+}
