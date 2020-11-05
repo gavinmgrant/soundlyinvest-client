@@ -1,7 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 html {
   background-color: #f7f7f7;
   margin: 0;
-  padding: 0;
   height: 100%;
 }
 
@@ -17,4 +21,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+form {
+  margin: 20px;
 }
