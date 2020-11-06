@@ -5,5 +5,12 @@
     align-items: center;
     height: 100vh;
     text-align: center;
-    padding-top: 100px;
+    padding: 130px 20px 10px 20px;
+}
+
+@media screen and (min-width: 640px) {
+    .loan {
+        height: 100vh;
+        padding: 100px 20px 10px 20px;  
+    }
 }
