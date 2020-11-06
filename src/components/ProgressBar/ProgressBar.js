@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { ArrowRight, CircleSolid, CircleOpen} from '../../utils/Icons';
+import { ArrowRight } from '../../utils/Icons';
 import './ProgressBar.css';
 
 class ProgressBar extends Component {

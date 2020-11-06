@@ -12,12 +12,6 @@ class Report extends Component {
                         <th colspan="2" class="report-title">Investment Property Report</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Maximum Purchase Price</td>
-                        <td>$1,500,000</td>
-                    </tr>
-                </tbody>
                 <thead>
                     <tr>
                         <th colspan="2">Property</th>
@@ -132,6 +126,10 @@ class Report extends Component {
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>Maximum Purchase Price</td>
+                        <td>$1,500,000</td>
+                    </tr>
                     <tr>
                         <td>Gross Rent Multiplier</td>
                         <td>13</td>
