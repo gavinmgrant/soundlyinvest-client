@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import ReactTooltip from 'react-tooltip';
+import { InfoCircle } from '../../utils/Icons';
 import './Goals.css';
 
 class Goals extends Component {
@@ -13,14 +14,16 @@ class Goals extends Component {
             <form>
                 <section>
                     <section>
-                        <label for="grm" data-tip="GRM = Purchase Price / Gross Scheduled Income">Gross Rent Multiplier: </label>
+                        <label for="grm">Gross Rent Multiplier: </label>
+                        <span data-tip="GRM = Purchase Price / Gross Scheduled Income">{InfoCircle}</span>
                         <ReactTooltip />
-                        <input type="number" name="grm" min="1" max="20" placeholder="14" />
+                        <input type="number" name="grm" min="1" max="20" placeholder="A good range is 9 to 15." />
                     </section>
                     <section>
-                        <label for="cap-rate" data-tip="CAP Rate = Yearly Net Operating Income / Purchase Price">Cap Rate (%): </label>
+                        <label for="cap-rate">Cap Rate (%): </label>
+                        <span data-tip="CAP Rate = Yearly Net Operating Income / Purchase Price">{InfoCircle}</span>
                         <ReactTooltip />
-                        <input type="number" name="cap-rate" placeholder="4" min="0"/>
+                        <input type="number" name="cap-rate" placeholder="A good range is 4% to 10%." min="0"/>
                     </section>
                 </section>
                 <Link to="/report">

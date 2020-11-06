@@ -14,7 +14,7 @@ class Report extends Component {
                 </thead>
                 <thead>
                     <tr>
-                        <th colspan="2">Property</th>
+                        <th colspan="2">Subject Property</th>
                     </tr>
                 </thead>
                 <tbody>

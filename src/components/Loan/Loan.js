@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import ReactTooltip from 'react-tooltip';
+import { InfoCircle } from '../../utils/Icons';
 import './Loan.css';
 
 class Loan extends Component {
@@ -21,6 +23,8 @@ class Loan extends Component {
                     </section>
                     <section>
                         <label for="loan-period">Loan Period (months): </label>
+                        <span data-tip="Typically 360 months (30 years).">{InfoCircle}</span>
+                        <ReactTooltip />
                         <input type="number" name="loan-period" min="0"/>
                     </section>
                 </section>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import ReactTooltip from 'react-tooltip';
+import { InfoCircle } from '../../utils/Icons';
 import './Income.css';
 
 class Income extends Component {
@@ -12,27 +14,21 @@ class Income extends Component {
             <form>
                 <section>
                     <section>
-                        <label for="unit-1">Unit 1: </label>
+                        <label for="rental">Rental Income: </label>
+                        <span data-tip="If multifamily, enter total rent for all units.">{InfoCircle}</span>
+                        <ReactTooltip />
                         <input type="number" name="unit-1" min="0"/>
                     </section>
                     <section>
-                        <label for="unit-2">Unit 2: </label>
-                        <input type="number" name="unit-2" min="0"/>
-                    </section>
-                    <section>
-                        <label for="unit-3">Unit 3: </label>
-                        <input type="number" name="unit-3" min="0"/>
-                    </section>
-                    <section>
-                        <label for="unit-4">Unit 4: </label>
-                        <input type="number" name="unit-4" min="0"/>
-                    </section>
-                    <section>
-                        <label for="storage">Storage: </label>
+                        <label for="storage">Storage Income: </label>
+                        <span data-tip="If renting storage space, enter total amount here.">{InfoCircle}</span>
+                        <ReactTooltip />
                         <input type="number" name="storage" min="0"/>
                     </section>
                     <section>
-                        <label for="parking">Parking: </label>
+                        <label for="parking">Parking Income: </label>
+                        <span data-tip="If renting parking space(s), enter total amount here.">{InfoCircle}</span>
+                        <ReactTooltip />
                         <input type="number" name="parking" min="0"/>
                     </section>
                 </section>

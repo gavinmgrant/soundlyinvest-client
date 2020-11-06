@@ -5,4 +5,11 @@
     align-items: center;
     height: 100vh;
     text-align: center;
+    padding: 60px 20px 10px 20px;
+}
+
+.landing-form {
+    width: 90%;
+    min-width: 280px;
+    max-width: 600px;
 }
