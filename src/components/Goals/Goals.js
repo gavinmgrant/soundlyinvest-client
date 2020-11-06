@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import ReactTooltip from 'react-tooltip';
 import './Goals.css';
 
 class Goals extends Component {
@@ -12,11 +13,13 @@ class Goals extends Component {
             <form>
                 <section>
                     <section>
-                        <label for="grm">Gross Rent Multiplier: </label>
+                        <label for="grm" data-tip="GRM = Purchase Price / Gross Scheduled Income">Gross Rent Multiplier: </label>
+                        <ReactTooltip />
                         <input type="number" name="grm" min="1" max="20" placeholder="14" />
                     </section>
                     <section>
-                        <label for="cap-rate">Cap Rate (%): </label>
+                        <label for="cap-rate" data-tip="CAP Rate = Yearly Net Operating Income / Purchase Price">Cap Rate (%): </label>
+                        <ReactTooltip />
                         <input type="number" name="cap-rate" placeholder="4" min="0"/>
                     </section>
                 </section>
