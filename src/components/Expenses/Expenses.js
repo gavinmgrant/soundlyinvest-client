@@ -14,10 +14,10 @@ class Expenses extends Component {
             <form>
                 <section>
                     <section>
-                        <label for="property-taxes">Property Taxes: </label>
-                        <span data-tip="Enter dollar amount for property taxes per month.">{InfoCircle}</span>
+                        <label for="property-tax-rate">Property Tax Rate (%): </label>
+                        <span data-tip="Enter the whole number. If 1%, enter 1, not 0.01.">{InfoCircle}</span>
                         <ReactTooltip />
-                        <input type="number" name="property-taxes" min="0"/>
+                        <input type="number" name="property-tax-rate" min="0"/>
                     </section>
                     <section>
                         <label for="property-manager">Property Manager: </label>

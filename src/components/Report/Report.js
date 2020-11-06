@@ -30,28 +30,16 @@ class Report extends Component {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Unit 1</td>
-                        <td>$2,500</td>
+                        <td>Rental Income</td>
+                        <td>$9,000</td>
                     </tr>
                     <tr>
-                        <td>Unit 2</td>
-                        <td>$3,500</td>
-                    </tr>
-                    <tr>
-                        <td>Unit 3</td>
-                        <td>$3,500</td>
-                    </tr>
-                    <tr>
-                        <td>Unit 4</td>
+                        <td>Storage Income</td>
                         <td>0</td>
                     </tr>
                     <tr>
-                        <td>Storage</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>Parking</td>
-                        <td>0</td>
+                        <td>Parking Income</td>
+                        <td>$500</td>
                     </tr>
                     <tr>
                         <td>Total Income</td>
