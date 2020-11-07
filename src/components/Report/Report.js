@@ -25,6 +25,33 @@ class Report extends Component {
                 </tbody>
                 <thead>
                     <tr>
+                        <th colspan="2">Purchase Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Purchase Price</td>
+                        <td>$1,500,000</td>
+                    </tr>
+                    <tr>
+                        <td>Down Payment</td>
+                        <td>$300,000 (20%)</td>
+                    </tr>
+                    <tr>
+                        <td>Interest Rate</td>
+                        <td>4%</td>
+                    </tr>
+                    <tr>
+                        <td>Loan Period</td>
+                        <td>360 months</td>
+                    </tr>
+                    <tr>
+                        <td>Monthly Payment</td>
+                        <td>$5,729</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
                         <th colspan="2">Monthly Income</th>
                     </tr>
                 </thead>
@@ -87,37 +114,10 @@ class Report extends Component {
                 </tbody>
                 <thead>
                     <tr>
-                        <th colspan="2">Loan Terms</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Down Payment</td>
-                        <td>$300,000 (20%)</td>
-                    </tr>
-                    <tr>
-                        <td>Interest Rate</td>
-                        <td>4%</td>
-                    </tr>
-                    <tr>
-                        <td>Loan Period</td>
-                        <td>360 months</td>
-                    </tr>
-                    <tr>
-                        <td>Monthly Payment</td>
-                        <td>$5,729</td>
-                    </tr>
-                </tbody>
-                <thead>
-                    <tr>
                         <th colspan="2">Investment Analytics</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Purchase Price</td>
-                        <td>$1,500,000</td>
-                    </tr>
                     <tr>
                         <td>Gross Rent Multiplier</td>
                         <td>13</td>
