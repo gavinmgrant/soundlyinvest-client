@@ -1,6 +1,6 @@
 # SoundlyInvest
 
-SoundlyInvest is a React.js app that helps you soundly invest in real estate.
+SoundlyInvest is a React.js app that helps you soundly invest in a rental property by running the numbers.
 
 ## Available Scripts
 

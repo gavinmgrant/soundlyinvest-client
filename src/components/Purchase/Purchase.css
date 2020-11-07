@@ -1,4 +1,4 @@
-.loan {
+.purchase {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +9,7 @@
 }
 
 @media screen and (min-width: 640px) {
-    .loan {
+    .purchase {
         height: 100vh;
         padding: 100px 20px 10px 20px;  
     }

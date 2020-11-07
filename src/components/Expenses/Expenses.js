@@ -56,8 +56,8 @@ class Expenses extends Component {
                         <input type="number" name="vacancy-rate" min="0" placeholder="2% is a good starting point."/>
                     </section>
                 </section>
-                <Link to="/loan">
-                    <input className="submit-button" type="submit" value="Next" />
+                <Link to="/report">
+                    <input className="submit-button" type="submit" value="Finish" />
                 </Link>
             </form>
         </div>

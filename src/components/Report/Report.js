@@ -115,7 +115,7 @@ class Report extends Component {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Maximum Purchase Price</td>
+                        <td>Purchase Price</td>
                         <td>$1,500,000</td>
                     </tr>
                     <tr>
