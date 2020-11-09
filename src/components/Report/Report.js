@@ -9,12 +9,12 @@ class Report extends Component {
             <table className="report-table">
                 <thead>
                     <tr>
-                        <th colspan="2" class="report-title">Investment Property Report</th>
+                        <th colSpan="2" className="report-title">Investment Property Report</th>
                     </tr>
                 </thead>
                 <thead>
                     <tr>
-                        <th colspan="2">Subject Property</th>
+                        <th colSpan="2">Subject Property</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,7 +25,7 @@ class Report extends Component {
                 </tbody>
                 <thead>
                     <tr>
-                        <th colspan="2">Purchase Information</th>
+                        <th colSpan="2">Purchase Information</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -75,7 +75,7 @@ class Report extends Component {
                 </tbody>
                 <thead>
                     <tr>
-                        <th colspan="2">Monthly Expenses</th>
+                        <th colSpan="2">Monthly Expenses</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -114,7 +114,7 @@ class Report extends Component {
                 </tbody>
                 <thead>
                     <tr>
-                        <th colspan="2">Investment Analytics</th>
+                        <th colSpan="2">Investment Analytics</th>
                     </tr>
                 </thead>
                 <tbody>
