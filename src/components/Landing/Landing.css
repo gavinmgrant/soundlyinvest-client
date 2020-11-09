@@ -13,3 +13,7 @@
     min-width: 280px;
     max-width: 600px;
 }
+
+.places-auto {
+    width: 90%;
+}

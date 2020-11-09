@@ -14,25 +14,25 @@ class Purchase extends Component {
             <form>
                 <section>
                     <section>
-                        <label for="purchase-price">Purchase Price ($): </label>
+                        <label htmlFor="purchase-price">Purchase Price ($): </label>
                         <span data-tip="Enter your proposed purchase price.">{InfoCircle}</span>
                         <ReactTooltip />
                         <input type="number" name="purchase-price" min="0"/>
                     </section>
                     <section>
-                        <label for="down-payment">Loan Down Payment (%): </label>
+                        <label htmlFor="down-payment">Loan Down Payment (%): </label>
                         <span data-tip="Enter a whole number. If 20%, enter 20, not 0.20.">{InfoCircle}</span>
                         <ReactTooltip />
                         <input type="number" name="down-payment" min="0"/>
                     </section>
                     <section>
-                        <label for="interest-rate">Loan Interest Rate (%): </label>
+                        <label htmlFor="interest-rate">Loan Interest Rate (%): </label>
                         <span data-tip="Enter a whole number. If 4%, enter 4, not 0.04.">{InfoCircle}</span>
                         <ReactTooltip />
                         <input type="number" name="interest-rate" min="0"/>
                     </section>
                     <section>
-                        <label for="loan-period">Loan Period (months): </label>
+                        <label htmlFor="loan-period">Loan Period (months): </label>
                         <span data-tip="Enter the number of months until loan is paid off.">{InfoCircle}</span>
                         <ReactTooltip />
                         <input type="number" name="loan-period" min="0" placeholder="360 months is a good starting point."/>

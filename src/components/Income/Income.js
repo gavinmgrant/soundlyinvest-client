@@ -14,19 +14,19 @@ class Income extends Component {
             <form>
                 <section>
                     <section>
-                        <label for="rental">Rental Income ($): </label>
+                        <label htmlFor="rental">Rental Income ($): </label>
                         <span data-tip="If multifamily, enter total rent for all units.">{InfoCircle}</span>
                         <ReactTooltip />
                         <input type="number" name="unit-1" min="0"/>
                     </section>
                     <section>
-                        <label for="storage">Storage Income ($): </label>
+                        <label htmlFor="storage">Storage Income ($): </label>
                         <span data-tip="If renting storage space, enter total amount here.">{InfoCircle}</span>
                         <ReactTooltip />
                         <input type="number" name="storage" min="0"/>
                     </section>
                     <section>
-                        <label for="parking">Parking Income ($): </label>
+                        <label htmlFor="parking">Parking Income ($): </label>
                         <span data-tip="If renting parking space(s), enter total amount here.">{InfoCircle}</span>
                         <ReactTooltip />
                         <input type="number" name="parking" min="0"/>
