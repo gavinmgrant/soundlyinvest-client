@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import usePlacesAutocomplete from "use-places-autocomplete";
 import {
     Combobox,
@@ -8,8 +8,10 @@ import {
     ComboboxOption,
 } from "@reach/combobox";
 import '@reach/combobox/styles.css';
+import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
 
 export default function PlacesAutocomplete() {
+    const context = useContext(SoundlyInvestContext);
     const {
         ready,
         value,
@@ -24,6 +26,7 @@ export default function PlacesAutocomplete() {
     
     const handleSelect = (val) => {
         setValue(val, false);
+        context.setAddress(val);
         console.log(val);
         clearSuggestions();
     };
@@ -31,7 +34,7 @@ export default function PlacesAutocomplete() {
     return (
         <div className="places-auto">
             <Combobox onSelect={handleSelect} aria-labelledby="demo">
-                <ComboboxInput value={value} onChange={handleInput} disabled={!ready} placeholder="Enter an address" />
+                <ComboboxInput value={value} onChange={handleInput} disabled={!ready} placeholder="Enter the property's address." />
                     <ComboboxPopover>
                         <ComboboxList>
                         {status === "OK" &&
