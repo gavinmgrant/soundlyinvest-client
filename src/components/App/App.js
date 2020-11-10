@@ -10,6 +10,8 @@ class App extends Component {
     super(props);
       this.state = {
         propAddress: '',
+        purchasePrice: null,
+        downPayment: null,
       }
   };
 
@@ -19,10 +21,24 @@ class App extends Component {
     })
   };
 
+  handleSetPrice = price => {
+    this.setState({
+      purchasePrice: price
+    })
+  };
+
+  handleSetDownPayment = dp => {
+    this.setState({
+      downPayment: dp
+    })
+  };
+
   render() {
     const value = {
       propAddress: this.state.propAddress,
       setAddress: this.handleSetAddress,
+      setPrice: this.handleSetPrice,
+      setDownPayment: this.handleSetDownPayment,
     }
 
     return (

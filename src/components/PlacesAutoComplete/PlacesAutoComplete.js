@@ -34,7 +34,7 @@ export default function PlacesAutocomplete() {
     return (
         <div className="places-auto">
             <Combobox onSelect={handleSelect} aria-labelledby="demo">
-                <ComboboxInput value={value} onChange={handleInput} disabled={!ready} placeholder="Enter the property's address." />
+                <ComboboxInput value={value} onChange={handleInput} disabled={!ready} placeholder={context.propAddress ? context.propAddress : "Enter the property's address."} />
                     <ComboboxPopover>
                         <ComboboxList>
                         {status === "OK" &&

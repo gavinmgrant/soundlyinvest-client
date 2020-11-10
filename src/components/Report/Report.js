@@ -34,7 +34,7 @@ class Report extends Component {
                     <tbody>
                         <tr>
                             <td>Purchase Price</td>
-                            <td>$1,500,000</td>
+                            <td>{this.context.purchasePrice ? this.context.purchasePrice : 'Not provided'}</td>
                         </tr>
                         <tr>
                             <td>Down Payment</td>
@@ -55,7 +55,7 @@ class Report extends Component {
                     </tbody>
                     <thead>
                         <tr>
-                            <th colspan="2">Monthly Income</th>
+                            <th colSpan="2">Monthly Income</th>
                         </tr>
                     </thead>
                     <tbody>
