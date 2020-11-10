@@ -27,14 +27,18 @@ export default function PlacesAutocomplete() {
     const handleSelect = (val) => {
         setValue(val, false);
         context.setAddress(val);
-        console.log(val);
         clearSuggestions();
     };
     
     return (
         <div className="places-auto">
             <Combobox onSelect={handleSelect} aria-labelledby="demo">
-                <ComboboxInput value={value} onChange={handleInput} disabled={!ready} placeholder={context.propAddress ? context.propAddress : "Enter the property's address."} />
+                <ComboboxInput 
+                    value={value} 
+                    onChange={handleInput} 
+                    disabled={!ready} 
+                    placeholder={context.propAddress ? context.propAddress : "Enter the property's address."} 
+                />
                     <ComboboxPopover>
                         <ComboboxList>
                         {status === "OK" &&

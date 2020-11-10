@@ -36,6 +36,8 @@ class App extends Component {
   render() {
     const value = {
       propAddress: this.state.propAddress,
+      purchasePrice: this.state.purchasePrice,
+      downPayment: this.state.downPayment,
       setAddress: this.handleSetAddress,
       setPrice: this.handleSetPrice,
       setDownPayment: this.handleSetDownPayment,

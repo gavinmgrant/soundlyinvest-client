@@ -74,3 +74,9 @@ button,
   width: 120px;
   margin: 20px;
 }
+
+@media screen and (min-width: 640px) {
+  form {
+    min-width: 500px;
+  }
+}
