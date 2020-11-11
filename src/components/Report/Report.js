@@ -35,19 +35,19 @@ class Report extends Component {
                     <tbody>
                         <tr>
                             <td>Purchase Price</td>
-                            <td>${this.context.purchasePrice ? this.context.purchasePrice : 'Not provided'}</td>
+                            <td>${this.context.purchasePrice}</td>
                         </tr>
                         <tr>
                             <td>Down Payment</td>
-                            <td>${this.context.downPayment ? <DownPaymentAmount /> : 'Not provided'}</td>
+                            <td>$<DownPaymentAmount /></td>
                         </tr>
                         <tr>
                             <td>Interest Rate</td>
-                            <td>{this.context.interestRate ? this.context.interestRate : 'Not provided'}%</td>
+                            <td>{this.context.interestRate}%</td>
                         </tr>
                         <tr>
                             <td>Loan Period</td>
-                            <td>{this.context.loanPeriod ? this.context.loanPeriod + ' years': 'Not provided'}</td>
+                            <td>{this.context.loanPeriod} years</td>
                         </tr>
                         <tr>
                             <td>Monthly Payment</td>
@@ -62,19 +62,19 @@ class Report extends Component {
                     <tbody>
                         <tr>
                             <td>Rental Income</td>
-                            <td>${this.context.rentalIncome ? this.context.rentalIncome : 'Not provided'}</td>
+                            <td>${this.context.rentalIncome}</td>
                         </tr>
                         <tr>
                             <td>Storage Income</td>
-                            <td>${this.context.storageIncome ? this.context.storageIncome : 'Not provided'}</td>
+                            <td>${this.context.storageIncome}</td>
                         </tr>
                         <tr>
                             <td>Parking Income</td>
-                            <td>${this.context.parkingIncome ? this.context.parkingIncome : 'Not provided'}</td>
+                            <td>${this.context.parkingIncome}</td>
                         </tr>
                         <tr>
                             <td>Total Income</td>
-                            <td>${this.context.rentalIncome && this.context.storageIncome && this.context.parkingIncome ? <TotalIncome /> : 'Cannot calculate'}</td>
+                            <td>$<TotalIncome /></td>
                         </tr>
                     </tbody>
                     <thead>
@@ -85,31 +85,31 @@ class Report extends Component {
                     <tbody>
                         <tr>
                             <td>Property Taxes ({this.context.taxRate}%)</td>
-                            <td>${this.context.purchasePrice && this.context.taxRate ? <TaxAmount /> : 'Cannot calculate'}</td>
+                            <td>$<TaxAmount /></td>
                         </tr>
                         <tr>
                             <td>Property Manager</td>
-                            <td>${this.context.propertyManager ? this.context.propertyManager : 'Not provided'}</td>
+                            <td>${this.context.propertyManager}</td>
                         </tr>
                         <tr>
                             <td>Insurance</td>
-                            <td>${this.context.insurance ? this.context.insurance : 'Not provided'}</td>
+                            <td>${this.context.insurance}</td>
                         </tr>
                         <tr>
                             <td>Utilities</td>
-                            <td>${this.context.utilities ? this.context.utilities : 'Not provided'}</td>
+                            <td>${this.context.utilities}</td>
                         </tr>
                         <tr>
                             <td>Gardener</td>
-                            <td>${this.context.gardener ? this.context.gardener : 'Not provided'}</td>
+                            <td>${this.context.gardener}</td>
                         </tr>
                         <tr>
                             <td>Maintenance</td>
-                            <td>${this.context.maintenance ? this.context.maintenance : 'Not provided'}</td>
+                            <td>${this.context.maintenance}</td>
                         </tr>
                         <tr>
                             <td>Vacancy ({this.context.vacancyRate}%)</td>
-                            <td>${this.context.vacancyRate ? <VacancyAmount /> : 'Cannot calculate'}</td>
+                            <td>$<VacancyAmount /></td>
                         </tr>
                         <tr>
                             <td>Total Expenses</td>
