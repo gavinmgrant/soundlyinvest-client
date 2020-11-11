@@ -38,7 +38,7 @@ class Report extends Component {
                             <td>$ {this.context.purchasePrice}</td>
                         </tr>
                         <tr>
-                            <td>Down Payment</td>
+                            <td>Down Payment ({this.context.downPayment}%)</td>
                             <td>$ <DownPaymentAmount /></td>
                         </tr>
                         <tr>
@@ -104,8 +104,8 @@ class Report extends Component {
                             <td>$ {this.context.gardener}</td>
                         </tr>
                         <tr>
-                            <td>Maintenance</td>
-                            <td>$ {this.context.maintenance}</td>
+                            <td>Miscellaneous</td>
+                            <td>$ {this.context.miscellaneous}</td>
                         </tr>
                         <tr>
                             <td>Vacancy ({this.context.vacancyRate}%)</td>

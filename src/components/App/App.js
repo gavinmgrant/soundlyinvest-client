@@ -22,7 +22,7 @@ class App extends Component {
         insurance: '',
         utilities: '',
         gardener: '',
-        maintenance: '',
+        miscellaneous: '',
         vacancyRate: '',
       }
   };
@@ -105,9 +105,9 @@ class App extends Component {
     })
   };
 
-  handleMaintenance = fee => {
+  handleMiscellaneous = fee => {
     this.setState({
-      maintenance: fee
+      miscellaneous: fee
     })
   };
 
@@ -132,7 +132,7 @@ class App extends Component {
       insurance: this.state.insurance,
       utilities: this.state.utilities,
       gardener: this.state.gardener,
-      maintenance: this.state.maintenance,
+      miscellaneous: this.state.miscellaneous,
       vacancyRate: this.state.vacancyRate,
       setAddress: this.handleSetAddress,
       setPrice: this.handleSetPrice,
@@ -147,7 +147,7 @@ class App extends Component {
       setInsurance: this.handleInsurance,
       setUtilities: this.handleUtilities,
       setGardener: this.handleGardener,
-      setMaintenance: this.handleMaintenance,
+      setMiscellaneous: this.handleMiscellaneous,
       setVacancyRate: this.handleVacancyRate,
     }
 

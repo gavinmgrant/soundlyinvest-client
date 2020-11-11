@@ -16,7 +16,7 @@ class Expenses extends Component {
             insurance: '',
             utilities: '',
             gardener: '',
-            maintenance: '',
+            miscellaneous: '',
             vacancyRate: '',
         }
     }
@@ -51,9 +51,9 @@ class Expenses extends Component {
         })
     };
 
-    updateMaintenance = (e) => {
+    updateMiscellaneous = (e) => {
         this.setState({
-            maintenance: e.target.value
+            miscellaneous: e.target.value
         })
     };
 
@@ -70,7 +70,7 @@ class Expenses extends Component {
         this.context.setInsurance(this.state.insurance);
         this.context.setUtilities(this.state.utilities);
         this.context.setGardener(this.state.gardener);
-        this.context.setMaintenance(this.state.maintenance);
+        this.context.setMiscellaneous(this.state.miscellaneous);
         this.context.setVacancyRate(this.state.vacancyRate);
         this.props.history.push('/report');
     }
@@ -138,16 +138,16 @@ class Expenses extends Component {
                         value={this.state.gardener}
                         placeholder="Enter landscaping fee per month."
                     />
-                    <label htmlFor="maintenance">Maintenance ($): <span data-tip="Enter miscellaneous maintenance expenses here.">{InfoCircle}</span>
+                    <label htmlFor="miscellaneous">Miscellaneous ($): <span data-tip="Enter miscellaneous expenses here, such as HOA dues.">{InfoCircle}</span>
                         <ReactTooltip /> 
                     </label>
                     <input 
                         type="number" 
-                        name="maintenance" 
+                        name="miscellaneous" 
                         min="0"
-                        onChange={this.updateMaintenance}
-                        value={this.state.maintenance}
-                        placeholder="Enter maintenance/miscellaneous fees."
+                        onChange={this.updateMiscellaneous}
+                        value={this.state.miscellaneous}
+                        placeholder="Enter any miscellaneous expenses."
                     />
                     <label htmlFor="vacancy-rate">Vacancy Rate (%): <span data-tip="Enter a whole number. This is a percentage of monthly income. 2% is a good starting point.">{InfoCircle}</span>
                         <ReactTooltip />

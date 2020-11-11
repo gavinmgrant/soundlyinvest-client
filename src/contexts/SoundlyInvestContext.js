@@ -14,7 +14,7 @@ const SoundlyInvestContext = React.createContext({
     insurance: '',
     utilities: '',
     gardener: '',
-    maintenance: '',
+    miscellaneous: '',
     vacancyRate: '',
 });
 

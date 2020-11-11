@@ -47,7 +47,7 @@ export function VacancyAmount() {
 export function TotalExpenses() {
     const context = useContext(SoundlyInvestContext);
 
-    return TaxAmount() + parseInt(context.propertyManager) + parseInt(context.insurance) + parseInt(context.utilities) + parseInt(context.gardener) + parseInt(context.maintenance) + VacancyAmount();
+    return TaxAmount() + parseInt(context.propertyManager) + parseInt(context.insurance) + parseInt(context.utilities) + parseInt(context.gardener) + parseInt(context.miscellaneous) + VacancyAmount();
 };
 
 export function GRM() {
