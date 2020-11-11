@@ -57,6 +57,7 @@ input {
 }
 
 input,
+select,
 button {
   margin: 5px;
   padding: 12px 20px;

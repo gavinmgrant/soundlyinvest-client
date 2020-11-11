@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Report.css'
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
+import { DownPaymentAmount, MonthlyLoanPayment, TotalIncome, TaxAmount, VacancyAmount, TotalExpenses, GRM, MonthlyNOI, YearlyNOI, CashFlow, CapRate } from '../../utils/Calculations';
 
 class Report extends Component {
     static contextType = SoundlyInvestContext;
@@ -23,7 +24,7 @@ class Report extends Component {
                     <tbody>
                         <tr>
                             <td>Address</td>
-                            <td>{this.context.propAddress ? this.context.propAddress : 'No address'}</td>
+                            <td>{this.context.propAddress ? this.context.propAddress : 'Not provided'}</td>
                         </tr>
                     </tbody>
                     <thead>
@@ -34,23 +35,23 @@ class Report extends Component {
                     <tbody>
                         <tr>
                             <td>Purchase Price</td>
-                            <td>{this.context.purchasePrice ? this.context.purchasePrice : 'Not provided'}</td>
+                            <td>${this.context.purchasePrice ? this.context.purchasePrice : 'Not provided'}</td>
                         </tr>
                         <tr>
                             <td>Down Payment</td>
-                            <td>$300,000 (20%)</td>
+                            <td>${this.context.downPayment ? <DownPaymentAmount /> : 'Not provided'}</td>
                         </tr>
                         <tr>
                             <td>Interest Rate</td>
-                            <td>4%</td>
+                            <td>{this.context.interestRate ? this.context.interestRate : 'Not provided'}%</td>
                         </tr>
                         <tr>
                             <td>Loan Period</td>
-                            <td>360 months</td>
+                            <td>{this.context.loanPeriod ? this.context.loanPeriod + ' years': 'Not provided'}</td>
                         </tr>
                         <tr>
                             <td>Monthly Payment</td>
-                            <td>$5,729</td>
+                            <td>${this.context.loanPeriod && this.context.interestRate && this.context.downPayment && this.context.purchasePrice ? <MonthlyLoanPayment /> : 'Cannot calculate'}</td>
                         </tr>
                     </tbody>
                     <thead>
@@ -61,19 +62,19 @@ class Report extends Component {
                     <tbody>
                         <tr>
                             <td>Rental Income</td>
-                            <td>$9,000</td>
+                            <td>${this.context.rentalIncome ? this.context.rentalIncome : 'Not provided'}</td>
                         </tr>
                         <tr>
                             <td>Storage Income</td>
-                            <td>0</td>
+                            <td>${this.context.storageIncome ? this.context.storageIncome : 'Not provided'}</td>
                         </tr>
                         <tr>
                             <td>Parking Income</td>
-                            <td>$500</td>
+                            <td>${this.context.parkingIncome ? this.context.parkingIncome : 'Not provided'}</td>
                         </tr>
                         <tr>
                             <td>Total Income</td>
-                            <td>$9,500</td>
+                            <td>${this.context.rentalIncome && this.context.storageIncome && this.context.parkingIncome ? <TotalIncome /> : 'Cannot calculate'}</td>
                         </tr>
                     </tbody>
                     <thead>
@@ -83,36 +84,36 @@ class Report extends Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Property Taxes</td>
-                            <td>$1,771 (1.25%)</td>
+                            <td>Property Taxes ({this.context.taxRate}%)</td>
+                            <td>${this.context.purchasePrice && this.context.taxRate ? <TaxAmount /> : 'Cannot calculate'}</td>
                         </tr>
                         <tr>
                             <td>Property Manager</td>
-                            <td>$665 (7%)</td>
+                            <td>${this.context.propertyManager ? this.context.propertyManager : 'Not provided'}</td>
                         </tr>
                         <tr>
                             <td>Insurance</td>
-                            <td>$129</td>
+                            <td>${this.context.insurance ? this.context.insurance : 'Not provided'}</td>
                         </tr>
                         <tr>
-                            <td>Water & Sewer</td>
-                            <td>$150</td>
+                            <td>Utilities</td>
+                            <td>${this.context.utilities ? this.context.utilities : 'Not provided'}</td>
                         </tr>
                         <tr>
                             <td>Gardener</td>
-                            <td>$100</td>
+                            <td>${this.context.gardener ? this.context.gardener : 'Not provided'}</td>
                         </tr>
                         <tr>
                             <td>Maintenance</td>
-                            <td>$708 (0.5%)</td>
+                            <td>${this.context.maintenance ? this.context.maintenance : 'Not provided'}</td>
                         </tr>
                         <tr>
-                            <td>Vacancy</td>
-                            <td>$190 (2%)</td>
+                            <td>Vacancy ({this.context.vacancyRate}%)</td>
+                            <td>${this.context.vacancyRate ? <VacancyAmount /> : 'Cannot calculate'}</td>
                         </tr>
                         <tr>
                             <td>Total Expenses</td>
-                            <td>$3,422</td>
+                            <td>$<TotalExpenses /></td>
                         </tr>
                     </tbody>
                     <thead>
@@ -123,23 +124,23 @@ class Report extends Component {
                     <tbody>
                         <tr>
                             <td>Gross Rent Multiplier</td>
-                            <td>13</td>
+                            <td><GRM /></td>
                         </tr>
                         <tr>
                             <td>Cap Rate</td>
-                            <td>5%</td>
+                            <td><CapRate />%</td>
                         </tr>
                         <tr>
                             <td>Monthly Net Operating Income</td>
-                            <td>$6,078</td>
+                            <td>$<MonthlyNOI /></td>
                         </tr>
                         <tr>
                             <td>Yearly Net Operating Income</td>
-                            <td>$72,940</td>
+                            <td>$<YearlyNOI /></td>
                         </tr>
                         <tr>
                             <td>Monthly Cash Flow</td>
-                            <td>$349</td>
+                            <td>$<CashFlow /></td>
                         </tr>
                     </tbody>
                 </table>

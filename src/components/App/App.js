@@ -12,6 +12,18 @@ class App extends Component {
         propAddress: '',
         purchasePrice: null,
         downPayment: null,
+        interestRate: null,
+        loanPeriod: null,
+        rentalIncome: null,
+        storageIncome: null,
+        parkingIncome: null,
+        taxRate: null,
+        propertyManager: null,
+        insurance: null,
+        utilities: null,
+        gardener: null,
+        maintenance: null,
+        vacancyRate: null,
       }
   };
 
@@ -33,14 +45,110 @@ class App extends Component {
     })
   };
 
+  handleSetInterestRate = rate => {
+    this.setState({
+      interestRate: rate
+    })
+  };
+
+  handleLoanPeriod = years => {
+    this.setState({
+      loanPeriod: years
+    })
+  };
+
+  handleRentalIncome = income => {
+    this.setState({
+      rentalIncome: income
+    })
+  };
+
+  handleStorageIncome = income => {
+    this.setState({
+      storageIncome: income
+    })
+  };
+
+  handleParkingIncome = income => {
+    this.setState({
+      parkingIncome: income
+    })
+  };
+
+  handleTaxRate = rate => {
+    this.setState({
+      taxRate: rate
+    })
+  };
+
+  handlePropertyManager = fee => {
+    this.setState({
+      propertyManager: fee
+    })
+  };
+
+  handleInsurance = fee => {
+    this.setState({
+      insurance: fee
+    })
+  };
+
+  handleUtilities = fee => {
+    this.setState({
+      utilities: fee
+    })
+  };
+
+  handleGardener = fee => {
+    this.setState({
+      gardener: fee
+    })
+  };
+
+  handleMaintenance = fee => {
+    this.setState({
+      maintenance: fee
+    })
+  };
+
+  handleVacancyRate = rate => {
+    this.setState({
+      vacancyRate: rate
+    })
+  };
+
   render() {
     const value = {
       propAddress: this.state.propAddress,
       purchasePrice: this.state.purchasePrice,
       downPayment: this.state.downPayment,
+      interestRate: this.state.interestRate,
+      loanPeriod: this.state.loanPeriod,
+      rentalIncome: this.state.rentalIncome,
+      storageIncome: this.state.storageIncome,
+      parkingIncome: this.state.parkingIncome,
+      taxRate: this.state.taxRate,
+      propertyManager: this.state.propertyManager,
+      insurance: this.state.insurance,
+      utilities: this.state.utilities,
+      gardener: this.state.gardener,
+      maintenance: this.state.maintenance,
+      vacancyRate: this.state.vacancyRate,
       setAddress: this.handleSetAddress,
       setPrice: this.handleSetPrice,
       setDownPayment: this.handleSetDownPayment,
+      setInterestRate: this.handleSetInterestRate,
+      setLoanPeriod: this.handleLoanPeriod,
+      setRentalIncome: this.handleRentalIncome,
+      setStorageIncome: this.handleStorageIncome,
+      setParkingIncome: this.handleParkingIncome,
+      setTaxRate: this.handleTaxRate,
+      setPropertyManager: this.handlePropertyManager,
+      setInsurance: this.handleInsurance,
+      setUtilities: this.handleUtilities,
+      setGardener: this.handleGardener,
+      setMaintenance: this.handleMaintenance,
+      setVacancyRate: this.handleVacancyRate,
     }
 
     return (
