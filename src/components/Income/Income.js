@@ -58,7 +58,7 @@ class Income extends Component {
                         name="rental-income" 
                         min="0"
                         onChange={this.updateRental}
-                        placeholder={this.context.rentalIncome ? this.context.rentalIncome : "Enter the total amount of rent."}
+                        value={this.state.rentalIncome}
                     />
                     <label htmlFor="storage">Storage Income ($): <span data-tip="If renting storage space, enter total amount here.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -68,7 +68,7 @@ class Income extends Component {
                         name="storage-income"
                         min="0"
                         onChange={this.updateStorage}
-                        placeholder={this.context.storageIncome ? this.context.storageIncome : "Enter any rent for storage space."}
+                        value={this.state.storageIncome}
                     />
                     <label htmlFor="parking">Parking Income ($): <span data-tip="If renting parking space(s), enter total amount here.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -78,7 +78,7 @@ class Income extends Component {
                         name="parking-income"
                         min="0"
                         onChange={this.updateParking}
-                        placeholder={this.context.parkingIncome ? this.context.parkingIncome : "Enter any rent for parking."}
+                        value={this.state.parkingIncome}
                     />
                     <input 
                         className="submit-button" 

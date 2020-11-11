@@ -44,7 +44,6 @@ class Purchase extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        // need a way to avoid resetting context when value remains unchanged and submit button hit
         this.context.setPrice(this.state.purchasePrice);
         this.context.setDownPayment(this.state.downPayment);
         this.context.setInterestRate(this.state.interestRate);
@@ -67,7 +66,7 @@ class Purchase extends Component {
                         name="purchase-price" 
                         min="0" 
                         onChange={this.updatePrice} 
-                        placeholder={this.context.purchasePrice ? this.context.purchasePrice : "Enter your price."}
+                        value={this.state.purchasePrice}
                     />
                     <label htmlFor="down-payment">Loan Down Payment (%): <span data-tip="Enter a whole number. If 20%, enter 20, not 0.20.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -78,7 +77,7 @@ class Purchase extends Component {
                         min="0"
                         max="20"
                         onChange={this.updateDownPayment}
-                        placeholder={this.context.downPayment ? this.context.downPayment : "Enter down payment percentage."}
+                        value={this.state.downPayment}
                     />
                     <label htmlFor="interest-rate">Loan Interest Rate (%): <span data-tip="Enter a whole number. If 4%, enter 4, not 0.04.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -90,7 +89,7 @@ class Purchase extends Component {
                         max="20"
                         step=".01"
                         onChange={this.updateInterestRate}
-                        placeholder={this.context.interestRate ? this.context.interestRate : "Enter your loan's rate."}
+                        value={this.state.interestRate}
                     />
                     <label htmlFor="loan-period">Loan Period (years): <span data-tip="Select the number of years until loan is paid off.">{InfoCircle}</span>
                         <ReactTooltip />

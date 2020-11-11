@@ -35,15 +35,15 @@ class Report extends Component {
                     <tbody>
                         <tr>
                             <td>Purchase Price</td>
-                            <td>${this.context.purchasePrice}</td>
+                            <td>$ {this.context.purchasePrice}</td>
                         </tr>
                         <tr>
                             <td>Down Payment</td>
-                            <td>$<DownPaymentAmount /></td>
+                            <td>$ <DownPaymentAmount /></td>
                         </tr>
                         <tr>
                             <td>Interest Rate</td>
-                            <td>{this.context.interestRate}%</td>
+                            <td>{this.context.interestRate} %</td>
                         </tr>
                         <tr>
                             <td>Loan Period</td>
@@ -51,7 +51,7 @@ class Report extends Component {
                         </tr>
                         <tr>
                             <td>Monthly Payment</td>
-                            <td>${this.context.loanPeriod && this.context.interestRate && this.context.downPayment && this.context.purchasePrice ? <MonthlyLoanPayment /> : 'Cannot calculate'}</td>
+                            <td>$ {this.context.loanPeriod && this.context.interestRate && this.context.downPayment && this.context.purchasePrice ? <MonthlyLoanPayment /> : ' Cannot calculate'}</td>
                         </tr>
                     </tbody>
                     <thead>
@@ -62,19 +62,19 @@ class Report extends Component {
                     <tbody>
                         <tr>
                             <td>Rental Income</td>
-                            <td>${this.context.rentalIncome}</td>
+                            <td>$ {this.context.rentalIncome}</td>
                         </tr>
                         <tr>
                             <td>Storage Income</td>
-                            <td>${this.context.storageIncome}</td>
+                            <td>$ {this.context.storageIncome}</td>
                         </tr>
                         <tr>
                             <td>Parking Income</td>
-                            <td>${this.context.parkingIncome}</td>
+                            <td>$ {this.context.parkingIncome}</td>
                         </tr>
                         <tr>
                             <td>Total Income</td>
-                            <td>$<TotalIncome /></td>
+                            <td>$ <TotalIncome /></td>
                         </tr>
                     </tbody>
                     <thead>
@@ -85,35 +85,35 @@ class Report extends Component {
                     <tbody>
                         <tr>
                             <td>Property Taxes ({this.context.taxRate}%)</td>
-                            <td>$<TaxAmount /></td>
+                            <td>$ <TaxAmount /></td>
                         </tr>
                         <tr>
                             <td>Property Manager</td>
-                            <td>${this.context.propertyManager}</td>
+                            <td>$ {this.context.propertyManager}</td>
                         </tr>
                         <tr>
                             <td>Insurance</td>
-                            <td>${this.context.insurance}</td>
+                            <td>$ {this.context.insurance}</td>
                         </tr>
                         <tr>
                             <td>Utilities</td>
-                            <td>${this.context.utilities}</td>
+                            <td>$ {this.context.utilities}</td>
                         </tr>
                         <tr>
                             <td>Gardener</td>
-                            <td>${this.context.gardener}</td>
+                            <td>$ {this.context.gardener}</td>
                         </tr>
                         <tr>
                             <td>Maintenance</td>
-                            <td>${this.context.maintenance}</td>
+                            <td>$ {this.context.maintenance}</td>
                         </tr>
                         <tr>
                             <td>Vacancy ({this.context.vacancyRate}%)</td>
-                            <td>$<VacancyAmount /></td>
+                            <td>$ <VacancyAmount /></td>
                         </tr>
                         <tr>
                             <td>Total Expenses</td>
-                            <td>$<TotalExpenses /></td>
+                            <td>$ <TotalExpenses /></td>
                         </tr>
                     </tbody>
                     <thead>
@@ -124,23 +124,23 @@ class Report extends Component {
                     <tbody>
                         <tr>
                             <td>Gross Rent Multiplier</td>
-                            <td><GRM /></td>
+                            <td>{<TotalExpenses /> === 0 && !this.context.purchasePrice ? 'Cannot calculate' : <GRM />}</td>
                         </tr>
                         <tr>
                             <td>Cap Rate</td>
-                            <td><CapRate />%</td>
+                            <td>{<YearlyNOI /> === 0 && !this.context.purchasePrice ? 'Cannot calculate' : <CapRate />} %</td>
                         </tr>
                         <tr>
                             <td>Monthly Net Operating Income</td>
-                            <td>$<MonthlyNOI /></td>
+                            <td>$ <MonthlyNOI /></td>
                         </tr>
                         <tr>
                             <td>Yearly Net Operating Income</td>
-                            <td>$<YearlyNOI /></td>
+                            <td>$ <YearlyNOI /></td>
                         </tr>
                         <tr>
                             <td>Monthly Cash Flow</td>
-                            <td>$<CashFlow /></td>
+                            <td>$ {<MonthlyNOI /> === 0 && <MonthlyLoanPayment /> === 0 ? 'Cannot calculate' : <CashFlow />}</td>
                         </tr>
                     </tbody>
                 </table>

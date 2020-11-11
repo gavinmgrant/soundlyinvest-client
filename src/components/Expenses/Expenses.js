@@ -91,7 +91,7 @@ class Expenses extends Component {
                         min="0"
                         step=".01"
                         onChange={this.updateTaxRate}
-                        placeholder={this.context.taxRate ? this.context.taxRate : "Enter your tax rate percentage."}
+                        value={this.state.taxRate}
                     />
                     <label htmlFor="property-manager">Property Manager ($): <span data-tip="If you have a property manager, enter monthly fee here.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -101,7 +101,7 @@ class Expenses extends Component {
                         name="property-manager" 
                         min="0"
                         onChange={this.updatePropertyManager}
-                        placeholder={this.context.propertyManager ? this.context.propertyManager : "Enter fee for management."}
+                        value={this.state.propertyManager}
                     />
                     <label htmlFor="insurance">Insurance ($): <span data-tip="Enter total cost for insurance such as hazard and umbrella.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -111,7 +111,7 @@ class Expenses extends Component {
                         name="insurance" 
                         min="0"
                         onChange={this.updateInsurance}
-                        placeholder={this.context.insurance ? this.context.insurance : "Enter insurance cost."}
+                        value={this.state.insurance}
                     />
                     <label htmlFor="utilities">Utilities ($): <span data-tip="Enter all utility expenses paid by the landlord.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -121,7 +121,7 @@ class Expenses extends Component {
                         name="utilities" 
                         min="0"
                         onChange={this.updateUtilities}
-                        placeholder={this.context.utilities ? this.context.utilities : "Enter total utilities cost."}
+                        value={this.state.utilities}
                     />
                     <label htmlFor="gardener">Gardener ($): <span data-tip="Enter amount reserved for managing the landscape.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -131,7 +131,7 @@ class Expenses extends Component {
                         name="gardener" 
                         min="0"
                         onChange={this.updateGardener}
-                        placeholder={this.context.gardener ? this.context.gardener : "Enter gardener cost."}
+                        value={this.state.gardener}
                     />
                     <label htmlFor="maintenance">Maintenance ($): <span data-tip="Enter miscellaneous maintenance expenses here.">{InfoCircle}</span>
                         <ReactTooltip /> 
@@ -141,9 +141,9 @@ class Expenses extends Component {
                         name="maintenance" 
                         min="0"
                         onChange={this.updateMaintenance}
-                        placeholder={this.context.maintenance ? this.context.maintenance : "Enter reserves for maintenance."}
+                        value={this.state.maintenance}
                     />
-                    <label htmlFor="vacancy-rate">Vacancy Rate (%): <span data-tip="Enter a whole number. This is a percentage of monthly income.">{InfoCircle}</span>
+                    <label htmlFor="vacancy-rate">Vacancy Rate (%): <span data-tip="Enter a whole number. This is a percentage of monthly income. 2% is a good starting point.">{InfoCircle}</span>
                         <ReactTooltip />
                     </label>
                     <input 
@@ -151,7 +151,7 @@ class Expenses extends Component {
                         name="vacancy-rate" 
                         min="0" 
                         onChange={this.updateVacancyRate}
-                        placeholder={this.context.vacancyRate ? this.context.vacancyRate :"2% is a good starting point."}
+                        value={this.state.vacancyRate}
                     />
                     <input 
                         className="submit-button" 
