@@ -11,9 +11,9 @@ class Income extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            rentalIncome: 0,
-            storageIncome: 0,
-            parkingIncome: 0,
+            rentalIncome: '',
+            storageIncome: '',
+            parkingIncome: '',
         }
     }
 
@@ -59,6 +59,7 @@ class Income extends Component {
                         min="0"
                         onChange={this.updateRental}
                         value={this.state.rentalIncome}
+                        placeholder="Enter total rental income per month."
                     />
                     <label htmlFor="storage">Storage Income ($): <span data-tip="If renting storage space, enter total amount here.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -69,6 +70,7 @@ class Income extends Component {
                         min="0"
                         onChange={this.updateStorage}
                         value={this.state.storageIncome}
+                        placeholder="Enter total storage income per month."
                     />
                     <label htmlFor="parking">Parking Income ($): <span data-tip="If renting parking space(s), enter total amount here.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -79,6 +81,7 @@ class Income extends Component {
                         min="0"
                         onChange={this.updateParking}
                         value={this.state.parkingIncome}
+                        placeholder="Enter total parking income per month."
                     />
                     <input 
                         className="submit-button" 

@@ -11,9 +11,9 @@ class Purchase extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            purchasePrice: 0,
-            downPayment: 0,
-            interestRate: 0,
+            purchasePrice: '',
+            downPayment: '',
+            interestRate: '',
             loanPeriod: '30',
         }
     }
@@ -67,6 +67,7 @@ class Purchase extends Component {
                         min="0" 
                         onChange={this.updatePrice} 
                         value={this.state.purchasePrice}
+                        placeholder="Enter purchase price."
                     />
                     <label htmlFor="down-payment">Loan Down Payment (%): <span data-tip="Enter a whole number. If 20%, enter 20, not 0.20.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -78,6 +79,7 @@ class Purchase extends Component {
                         max="20"
                         onChange={this.updateDownPayment}
                         value={this.state.downPayment}
+                        placeholder="Enter down payment percentage."
                     />
                     <label htmlFor="interest-rate">Loan Interest Rate (%): <span data-tip="Enter a whole number. If 4%, enter 4, not 0.04.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -90,6 +92,7 @@ class Purchase extends Component {
                         step=".01"
                         onChange={this.updateInterestRate}
                         value={this.state.interestRate}
+                        placeholder="Enter rate percentage."
                     />
                     <label htmlFor="loan-period">Loan Period (years): <span data-tip="Select the number of years until loan is paid off.">{InfoCircle}</span>
                         <ReactTooltip />
