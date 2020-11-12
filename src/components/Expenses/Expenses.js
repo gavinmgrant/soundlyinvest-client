@@ -98,9 +98,11 @@ class Expenses extends Component {
                         name="property-tax-rate" 
                         min="0"
                         step=".01"
+                        max="100"
                         onChange={this.updateTaxRate}
                         value={this.state.taxRate}
                         placeholder="Enter property tax percentage."
+                        required
                     />
                     <label htmlFor="property-manager">Property Manager ($): <span data-tip="If you have a property manager, enter monthly fee here.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -112,6 +114,7 @@ class Expenses extends Component {
                         onChange={this.updatePropertyManager}
                         value={this.state.propertyManager}
                         placeholder="Enter property manager's monthly fee."
+                        required
                     />
                     <label htmlFor="insurance">Insurance ($): <span data-tip="Enter total cost for insurance such as hazard and umbrella.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -123,6 +126,7 @@ class Expenses extends Component {
                         onChange={this.updateInsurance}
                         value={this.state.insurance}
                         placeholder="Enter total insurance costs per month."
+                        required
                     />
                     <label htmlFor="utilities">Utilities ($): <span data-tip="Enter all utility expenses paid by the landlord.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -134,6 +138,7 @@ class Expenses extends Component {
                         onChange={this.updateUtilities}
                         value={this.state.utilities}
                         placeholder="Enter total utility cost paid by landlord."
+                        required
                     />
                     <label htmlFor="gardener">Gardener ($): <span data-tip="Enter amount reserved for managing the landscape.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -145,6 +150,7 @@ class Expenses extends Component {
                         onChange={this.updateGardener}
                         value={this.state.gardener}
                         placeholder="Enter landscaping fee per month."
+                        required
                     />
                     <label htmlFor="miscellaneous">Miscellaneous ($): <span data-tip="Enter miscellaneous expenses here, such as HOA dues.">{InfoCircle}</span>
                         <ReactTooltip /> 
@@ -156,6 +162,7 @@ class Expenses extends Component {
                         onChange={this.updateMiscellaneous}
                         value={this.state.miscellaneous}
                         placeholder="Enter any miscellaneous expenses."
+                        required
                     />
                     <label htmlFor="vacancy-rate">Vacancy Rate (%): <span data-tip="Enter a whole number. This is a percentage of monthly income. 2% is a good starting point.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -164,9 +171,11 @@ class Expenses extends Component {
                         type="number" 
                         name="vacancy-rate" 
                         min="0" 
+                        max="100"
                         onChange={this.updateVacancyRate}
                         value={this.state.vacancyRate}
                         placeholder="Enter percentage of vacancy."
+                        required
                     />
                     <input 
                         className="submit-button" 

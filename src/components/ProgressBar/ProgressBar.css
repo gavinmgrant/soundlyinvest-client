@@ -3,17 +3,17 @@
     margin: 10px;
 }
 
-.progressbar-title {
-    margin: 10px;
-}
-
+.progressbar-title,
+.dot,
 .arrow {
-    margin: 10px;
+    margin: 5px;
 }
 
 @media screen and (min-width: 640px) {
     .progressbar {
         font-size: 16px;
         margin: 8px;
+        display: flex;
+        justify-content: space-evenly;
     }
 }

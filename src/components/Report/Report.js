@@ -152,12 +152,20 @@ class Report extends Component {
                         </tr>
                     </tbody>
                 </table>
-                <section className="report-buttons">
-                    <button>Print to PDF</button>
-                    <Link to="/">
-                        <button>Start new report</button>
-                    </Link>
+                <section className="report-form">
+                    <form>
+                        <label htmlFor="report-name">Save this report:</label>
+                        <input 
+                            type="text"
+                            placeholder="Enter report name." 
+                            required
+                        />
+                        <input type="submit" value="Save" />
+                    </form>
                 </section>
+                <Link to="/">
+                    <button className="button-start-new">Start new report</button>
+                </Link>
             </div>
         );
     }

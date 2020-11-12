@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 import { ArrowRight, CircleSolid, CircleOpen } from '../../utils/Icons';
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
 import './ProgressBar.css';
@@ -10,19 +9,19 @@ class ProgressBar extends Component {
   render() {
     return (
       <nav className="progressbar">
-        <span className="progressbar-title">
+        <section className="progressbar-title">
           {this.context.pagePurchase ? 'Purchase' : ''}
           {this.context.pageIncome ? 'Income' : ''}
           {this.context.pageExpenses ? 'Expenses' : ''}
           {this.context.pageReport ? 'Report' : ''}
-        </span>
-        {this.context.pagePurchase ? CircleSolid : CircleOpen}
+        </section>
+        <span className="dot">{this.context.pagePurchase ? CircleSolid : CircleOpen}</span>
         <span className="arrow">{ArrowRight}</span>
-        {this.context.pageIncome ? CircleSolid : CircleOpen} 
+        <span className="dot">{this.context.pageIncome ? CircleSolid : CircleOpen}</span>
         <span className="arrow">{ArrowRight}</span>
-        {this.context.pageExpenses ? CircleSolid : CircleOpen}  
+        <span className="dot">{this.context.pageExpenses ? CircleSolid : CircleOpen}</span>  
         <span className="arrow">{ArrowRight}</span>
-        {this.context.pageReport ? CircleSolid : CircleOpen}
+        <span className="dot">{this.context.pageReport ? CircleSolid : CircleOpen}</span>
       </nav>
     );
   }

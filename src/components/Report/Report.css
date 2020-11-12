@@ -1,5 +1,10 @@
 .report {
-    padding: 120px 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 150px 0px 60px 0px;
 }
 
 .report-table {
@@ -14,9 +19,9 @@
     font-size: 28px;
 }
 
-.report-buttons {
-    text-align: center;
-    margin: 30px;
+.report-form {
+    margin: 20px;
+    max-width: 640px;
 }
 
 td,
@@ -29,4 +34,15 @@ thead,
 tfoot {
     background-color: #666666;
     color: #fff;
+}
+
+.button-start-new {
+    background-color: #222222;
+    color: #fff;
+}
+
+@media screen and (min-width: 640px) {
+    .report {
+        padding: 100px 20px 40px 20px;  
+    }
 }

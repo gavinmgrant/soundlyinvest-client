@@ -68,6 +68,7 @@ class Income extends Component {
                         onChange={this.updateRental}
                         value={this.state.rentalIncome}
                         placeholder="Enter total rental income per month."
+                        required
                     />
                     <label htmlFor="storage">Storage Income ($): <span data-tip="If renting storage space, enter total amount here.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -79,6 +80,7 @@ class Income extends Component {
                         onChange={this.updateStorage}
                         value={this.state.storageIncome}
                         placeholder="Enter total storage income per month."
+                        required
                     />
                     <label htmlFor="parking">Parking Income ($): <span data-tip="If renting parking space(s), enter total amount here.">{InfoCircle}</span>
                         <ReactTooltip />
@@ -90,6 +92,7 @@ class Income extends Component {
                         onChange={this.updateParking}
                         value={this.state.parkingIncome}
                         placeholder="Enter total parking income per month."
+                        required
                     />
                     <input 
                         className="submit-button" 
