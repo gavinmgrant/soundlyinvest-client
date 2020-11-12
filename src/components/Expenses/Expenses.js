@@ -21,6 +21,14 @@ class Expenses extends Component {
         }
     }
 
+    componentDidMount() {
+        this.context.setPageExpenses(true);
+    }
+
+    componentWillUnmount() {
+        this.context.setPageExpenses(false);
+    }
+
     updateTaxRate = (e) => {
         this.setState({
             taxRate: e.target.value

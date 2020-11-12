@@ -17,6 +17,14 @@ class Income extends Component {
         }
     }
 
+    componentDidMount() {
+        this.context.setPageIncome(true);
+    }
+
+    componentWillUnmount() {
+        this.context.setPageIncome(false);
+    }
+
     updateRental = (e) => {
         this.setState({
             rentalIncome: e.target.value

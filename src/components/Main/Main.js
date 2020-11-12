@@ -5,6 +5,7 @@ import Income from '../Income/Income';
 import Expenses from '../Expenses/Expenses';
 import Purchase from '../Purchase/Purchase';
 import Report from '../Report/Report';
+import Reports from '../Reports/Reports';
 import { Switch, Route } from "react-router-dom";
 
 class Main extends Component {
@@ -17,6 +18,7 @@ class Main extends Component {
           <Route path="/expenses" component={Expenses} />
           <Route path="/purchase" component={Purchase} />
           <Route path="/report" component={Report} />
+          <Route path="/reports" component={Reports} />
         </Switch>
       </nav>
     );

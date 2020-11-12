@@ -24,6 +24,10 @@ class App extends Component {
         gardener: '',
         miscellaneous: '',
         vacancyRate: '',
+        pagePurchase: false,
+        pageIncome: false,
+        pageExpenses: false,
+        pageReport: false,
       }
   };
 
@@ -117,6 +121,30 @@ class App extends Component {
     })
   };
 
+  handlePagePurchase = tf => {
+    this.setState({
+      pagePurchase: tf
+    })
+  };
+
+  handlePageIncome = tf => {
+    this.setState({
+      pageIncome: tf
+    })
+  };
+
+  handlePageExpenses = tf => {
+    this.setState({
+      pageExpenses: tf
+    })
+  };
+
+  handlePageReport = tf => {
+    this.setState({
+      pageReport: tf
+    })
+  };
+
   render() {
     const value = {
       propAddress: this.state.propAddress,
@@ -134,6 +162,10 @@ class App extends Component {
       gardener: this.state.gardener,
       miscellaneous: this.state.miscellaneous,
       vacancyRate: this.state.vacancyRate,
+      pagePurchase: this.state.pagePurchase,
+      pageIncome: this.state.pageIncome,
+      pageExpenses: this.state.pageExpenses,
+      pageReport: this.state.pageReport,
       setAddress: this.handleSetAddress,
       setPrice: this.handleSetPrice,
       setDownPayment: this.handleSetDownPayment,
@@ -149,6 +181,10 @@ class App extends Component {
       setGardener: this.handleGardener,
       setMiscellaneous: this.handleMiscellaneous,
       setVacancyRate: this.handleVacancyRate,
+      setPagePurchase: this.handlePagePurchase,
+      setPageIncome: this.handlePageIncome,
+      setPageExpenses: this.handlePageExpenses,
+      setPageReport: this.handlePageReport,
     }
 
     return (

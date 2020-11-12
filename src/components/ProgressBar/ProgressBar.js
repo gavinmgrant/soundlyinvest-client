@@ -1,29 +1,28 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { ArrowRight } from '../../utils/Icons';
+import { ArrowRight, CircleSolid, CircleOpen } from '../../utils/Icons';
+import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
 import './ProgressBar.css';
 
-class ProgressBar extends Component {
+class ProgressBar extends Component {    
+  static contextType = SoundlyInvestContext;
+
   render() {
     return (
       <nav className="progressbar">
-          <ul className="progressbar-list">
-            <NavLink to="/purchase" activeClassName="active">
-              <li className="progressbar-item">Purchase</li>
-            </NavLink>
-            <span className="arrow">{ArrowRight}</span>
-            <NavLink to="/income" activeClassName="active">
-              <li className="progressbar-item">Income</li>
-            </NavLink>
-            <span className="arrow">{ArrowRight}</span>
-            <NavLink to="/expenses" activeClassName="active">
-              <li className="progressbar-item">Expenses</li>
-            </NavLink>
-            <span className="arrow">{ArrowRight}</span>
-            <NavLink to="/report" activeClassName="active">
-              <li className="progressbar-item">Report</li>
-            </NavLink>
-          </ul>
+        <span className="progressbar-title">
+          {this.context.pagePurchase ? 'Purchase' : ''}
+          {this.context.pageIncome ? 'Income' : ''}
+          {this.context.pageExpenses ? 'Expenses' : ''}
+          {this.context.pageReport ? 'Report' : ''}
+        </span>
+        {this.context.pagePurchase ? CircleSolid : CircleOpen}
+        <span className="arrow">{ArrowRight}</span>
+        {this.context.pageIncome ? CircleSolid : CircleOpen} 
+        <span className="arrow">{ArrowRight}</span>
+        {this.context.pageExpenses ? CircleSolid : CircleOpen}  
+        <span className="arrow">{ArrowRight}</span>
+        {this.context.pageReport ? CircleSolid : CircleOpen}
       </nav>
     );
   }

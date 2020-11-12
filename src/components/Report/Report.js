@@ -7,6 +7,14 @@ import { DownPaymentAmount, MonthlyLoanPayment, TotalIncome, TaxAmount, VacancyA
 class Report extends Component {
     static contextType = SoundlyInvestContext;
 
+    componentDidMount() {
+        this.context.setPageReport(true);
+    }
+
+    componentWillUnmount() {
+        this.context.setPageReport(false);
+    }
+
     render() {
         return (
             <div className="report">

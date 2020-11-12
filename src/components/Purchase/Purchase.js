@@ -18,6 +18,14 @@ class Purchase extends Component {
         }
     }
 
+    componentDidMount() {
+        this.context.setPagePurchase(true);
+    }
+
+    componentWillUnmount() {
+        this.context.setPagePurchase(false);
+    }
+
     updatePrice = (e) => {
         this.setState({
             purchasePrice: e.target.value
