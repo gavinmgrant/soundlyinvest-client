@@ -20,6 +20,8 @@ const SoundlyInvestContext = React.createContext({
     pageIncome: false,
     pageExpenses: false,
     pageReport: false,
+    reports: [],
+    addReport: () => {},
 });
 
 export default SoundlyInvestContext;

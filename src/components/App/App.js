@@ -28,6 +28,7 @@ class App extends Component {
         pageIncome: false,
         pageExpenses: false,
         pageReport: false,
+        reports: [],
       }
   };
 
@@ -145,6 +146,12 @@ class App extends Component {
     })
   };
 
+  handleAddReport = report => {
+    this.setState({
+      reports: [ ...this.state.reports, report],
+    })
+  };
+
   render() {
     const value = {
       propAddress: this.state.propAddress,
@@ -166,6 +173,7 @@ class App extends Component {
       pageIncome: this.state.pageIncome,
       pageExpenses: this.state.pageExpenses,
       pageReport: this.state.pageReport,
+      reports: this.state.reports,
       setAddress: this.handleSetAddress,
       setPrice: this.handleSetPrice,
       setDownPayment: this.handleSetDownPayment,
@@ -185,6 +193,7 @@ class App extends Component {
       setPageIncome: this.handlePageIncome,
       setPageExpenses: this.handlePageExpenses,
       setPageReport: this.handlePageReport,
+      addReport: this.handleAddReport,
     }
 
     return (

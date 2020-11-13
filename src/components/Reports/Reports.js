@@ -43,7 +43,7 @@ class Reports extends Component {
     render() {
         return (
             <div className="reports-list">
-                <h1>Saved Reports</h1>
+                <h1 className="reports-list-title">Saved Reports</h1>
                 <p>{this.error}</p>
                 <ul>
                     {this.state.reports.map(report =>
@@ -51,8 +51,9 @@ class Reports extends Component {
                             key={report.id}
                             className="report-item"
                         >
-                            {report.id}
-                            {report.name}
+                            <p>id: {report.id}</p>
+                            <p>name: {report.report_name}</p>
+                            <p>date created: {report.date_created.slice(0, 10)}</p>
                         </li>)}
                 </ul>
             </div>
