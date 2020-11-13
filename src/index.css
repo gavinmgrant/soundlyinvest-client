@@ -42,7 +42,9 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+input:hover,
+button:hover {
   cursor: pointer;
 }
 

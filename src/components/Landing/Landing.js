@@ -17,9 +17,6 @@ function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
         <form className="landing-form">
           <label htmlFor="address">Start by entering an address: </label>
           <PlacesAutoComplete />
-          <Link to="/purchase">
-            <input className="submit-button" type="submit" value="Next" />
-          </Link>
         </form>
       </div>
     );

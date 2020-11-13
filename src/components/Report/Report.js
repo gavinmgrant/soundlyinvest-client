@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import config from '../../config';
 import './Report.css'
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
@@ -40,7 +40,6 @@ class Report extends Component {
             date_created: date,
             user_id: 1
         }
-
         fetch(`${config.API_ENDPOINT}/report`, {
             method: 'POST',
             body: JSON.stringify(newReport),
@@ -67,6 +66,7 @@ class Report extends Component {
         .catch(error => {
             console.error({ error });
         })
+        this.props.history.push('/reports');
     }
 
     render() {
@@ -230,4 +230,4 @@ class Report extends Component {
     }
 }
 
-export default Report;
+export default withRouter(Report);

@@ -9,6 +9,8 @@ import {
 } from "@reach/combobox";
 import '@reach/combobox/styles.css';
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
+import ValidationError from '../ValidationError/ValidationError';
+import './PlacesAutoComplete.css';
 
 export default function PlacesAutocomplete() {
     const context = useContext(SoundlyInvestContext);
@@ -29,6 +31,12 @@ export default function PlacesAutocomplete() {
         context.setAddress(val);
         clearSuggestions();
     };
+
+    const validateAddress = () => {
+        if (value.length === 0) {
+            return 'An address is required to continue.';
+        }
+    }
     
     return (
         <div className="places-auto">
@@ -39,14 +47,21 @@ export default function PlacesAutocomplete() {
                     disabled={!ready} 
                     placeholder={context.propAddress ? context.propAddress : "Enter the property's address."} 
                 />
-                    <ComboboxPopover>
-                        <ComboboxList>
-                        {status === "OK" &&
-                            data.map(({ description }) => (
-                            <ComboboxOption key={description} value={description} />
-                            ))}
-                        </ComboboxList>
-                    </ComboboxPopover>
+                <ComboboxPopover>
+                    <ComboboxList>
+                    {status === "OK" &&
+                        data.map(({ description }) => (
+                        <ComboboxOption key={description} value={description} />
+                        ))}
+                    </ComboboxList>
+                </ComboboxPopover>
+                <input 
+                    className="submit-button" 
+                    type="submit" 
+                    value="Next" 
+                    disabled={validateAddress()}
+                />
+                <ValidationError message={validateAddress()}/>
             </Combobox>
         </div>
     );
