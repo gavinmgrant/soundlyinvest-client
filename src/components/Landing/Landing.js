@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import PlacesAutoComplete from '../PlacesAutoComplete/PlacesAutoComplete';
 import './Landing.css';
 import scriptLoader from 'react-async-script-loader';
+import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
+import ValidationError from '../ValidationError/ValidationError';
 
 function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
+  const context = useContext(SoundlyInvestContext);
+
+  const validateAddress = () => {
+    if (!context.propAddress) {
+        return 'An address is required to continue.';
+    }
+  };
+
   if (isScriptLoaded && isScriptLoadSucceed) {
     return (
       <div className="landing">
@@ -17,6 +27,10 @@ function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
         <form className="landing-form">
           <label htmlFor="address">Start by entering an address: </label>
           <PlacesAutoComplete />
+          <Link to="/purchase">
+            <input className="submit-button" type="submit" value="Next" disabled={validateAddress()}/>
+          </Link>
+          <ValidationError message={validateAddress()}/>
         </form>
       </div>
     );
