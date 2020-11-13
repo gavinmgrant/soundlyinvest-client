@@ -27,7 +27,7 @@ function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
         <form className="landing-form">
           <label htmlFor="address">Start by entering an address: </label>
           <PlacesAutoComplete />
-          <Link to="/purchase">
+          <Link to={!context.propAddress ? "/" : "/purchase"}>
             <input className="submit-button" type="submit" value="Next" disabled={validateAddress()}/>
           </Link>
           <ValidationError message={validateAddress()}/>
