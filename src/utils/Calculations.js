@@ -40,8 +40,9 @@ export function TaxAmount() {
 
 export function VacancyAmount() {
     const context = useContext(SoundlyInvestContext);
+    const rawVacancy = TotalIncome() * (context.vacancyRate/100);
 
-    return TotalIncome() * (context.vacancyRate/100);  
+    return Math.round(rawVacancy);  
 };
 
 export function TotalExpenses() {

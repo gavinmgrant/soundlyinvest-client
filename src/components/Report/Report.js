@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import config from '../../config';
+import ReportForm from '../ReportForm/ReportForm'
 import './Report.css'
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
 import { DownPaymentAmount, MonthlyLoanPayment, TotalIncome, TaxAmount, VacancyAmount, TotalExpenses, GRM, MonthlyNOI, YearlyNOI, CashFlow, CapRate } from '../../utils/Calculations';
@@ -8,65 +8,12 @@ import { DownPaymentAmount, MonthlyLoanPayment, TotalIncome, TaxAmount, VacancyA
 class Report extends Component {
     static contextType = SoundlyInvestContext;
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            report_name: '',
-            date_created: '',
-            user_id: ''
-        }
-    }
-
     componentDidMount() {
         this.context.setPageReport(true);
     }
 
     componentWillUnmount() {
         this.context.setPageReport(false);
-    }
-
-    updateName = name => {
-        this.setState({
-            report_name: name
-        });
-    }
-
-    handleSubmit = e => {
-        e.preventDefault();
-        const { report_name } = e.target
-        let date = new Date().toLocaleString();
-        const newReport = {
-            report_name: report_name.value,
-            date_created: date,
-            user_id: 1
-        }
-        fetch(`${config.API_ENDPOINT}/report`, {
-            method: 'POST',
-            body: JSON.stringify(newReport),
-            headers: {
-                'content-type': 'application/json',
-            }
-        })
-        .then(res => {
-            if (!res.ok) {
-                return res.json().then(error => {
-                    throw error
-                })
-            }
-            return res.json()
-        })
-        .then(data => {
-            this.context.addReport({
-                ...data,
-                report_name: report_name.value,
-                date_created: date,
-                user_id: 1
-            })
-        })
-        .catch(error => {
-            console.error({ error });
-        })
-        this.props.history.push('/reports');
     }
 
     render() {
@@ -206,22 +153,7 @@ class Report extends Component {
                         </tr>
                     </tbody>
                 </table>
-                <section className="report-form">
-                    <form onSubmit={e => this.handleSubmit(e)}>
-                        <label htmlFor="report-name">Save this report:</label>
-                        <input 
-                            type="text"
-                            name="report_name"
-                            placeholder="Enter report name."
-                            onChange={e => this.updateName(e.target.value)} 
-                            required
-                        />
-                        <input 
-                            type="submit" 
-                            value="Save"
-                        />
-                    </form>
-                </section>
+                <ReportForm />
                 <Link to="/">
                     <button className="button-start-new">Start new report</button>
                 </Link>
