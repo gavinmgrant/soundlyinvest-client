@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import config from '../../config';
 import './ReportForm.css'
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';

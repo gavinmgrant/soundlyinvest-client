@@ -28,6 +28,10 @@ h1 {
   margin: 30px;
 }
 
+p {
+  margin: 3px 0 3px 0;
+}
+
 form {
   margin: 20px;
   display: flex;
@@ -71,6 +75,12 @@ button {
 button,
 .submit-button:hover {
   cursor: pointer;
+}
+
+button:hover,
+input[type=submit]:hover {
+  color: #fff;
+  background-color: #000000;
 }
 
 .submit-button {

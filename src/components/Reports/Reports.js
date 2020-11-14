@@ -52,11 +52,13 @@ class Reports extends Component {
                             key={report.id}
                             className="report-item"
                         >
-                            <p>Name: {report.report_name}</p>
-                            <p>Created on: {report.date_created.slice(0, 10)}</p>
+                            <h3>{report.report_name}</h3>
+                            <p>{report.date_created.slice(0, 10)}</p>
                             <p>{report.prop_address}</p>
-                            <p>{report.purchase_price}</p>
-                            <Link to={`/reports/${report.id}`}>Go to details</Link>
+                            <p>$ {report.purchase_price}</p>
+                            <button>
+                                Go to details
+                            </button>
                         </li>)}
                 </ul>
             </div>
