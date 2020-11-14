@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import config from '../../config';
 import './Reports.css';
 
@@ -63,4 +64,4 @@ class Reports extends Component {
     }
 }
 
-export default Reports;
+export default withRouter(Reports);
