@@ -1,7 +1,7 @@
 .footer {
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: #aaa;
@@ -13,5 +13,13 @@
     .footer {
         height: 60px;
         font-size: 16px;
+    }
+
+    .footer-nav {
+        margin-left: 20px;
+    }
+
+    .copyright {
+        margin-right: 20px;
     }
 }

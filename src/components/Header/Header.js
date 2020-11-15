@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './Header.css';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
@@ -10,9 +10,6 @@ class Header extends Component {
           <Link to="/" style={{ textDecoration: 'none' }}>
             <h2 className="title">SoundlyInvest</h2>
           </Link>
-          <NavLink to="/reports" activeClassName="active">
-            Saved Reports
-          </NavLink>
           <ProgressBar />
       </div>
     );
