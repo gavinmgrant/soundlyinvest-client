@@ -15,6 +15,9 @@ class SavedReport extends Component {
     static contextType = SoundlyInvestContext;
 
     componentDidMount() {
+        if (!this.context.reportId) {
+            this.props.history.push('/reports');
+        }
         fetch(`${config.API_ENDPOINT}/reports/${this.context.reportId}`, {
             method: 'GET',
                 headers: {
