@@ -38,7 +38,7 @@ export default function PlacesAutocomplete() {
                     value={value} 
                     onChange={handleInput} 
                     disabled={!ready} 
-                    placeholder={context.propAddress ? context.propAddress : "Enter the property's address."} 
+                    placeholder="Enter the property's address." 
                 />
                 <ComboboxPopover>
                     <ComboboxList>
