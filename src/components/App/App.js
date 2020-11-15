@@ -9,6 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
       this.state = {
+        reportId: 0,
         propAddress: '',
         purchasePrice: '',
         downPayment: '',
@@ -30,6 +31,12 @@ class App extends Component {
         pageReport: false,
         reports: [],
       }
+  };
+
+  handleSetReportId = id => {
+    this.setState({
+      reportId: id
+    })
   };
 
   handleSetAddress = address => {
@@ -152,8 +159,15 @@ class App extends Component {
     })
   };
 
+  handleSetReports = rpts => {
+    this.setState({
+      reports: rpts
+    })
+  }
+
   render() {
     const value = {
+      reportId: this.state.reportId,
       propAddress: this.state.propAddress,
       purchasePrice: this.state.purchasePrice,
       downPayment: this.state.downPayment,
@@ -174,6 +188,7 @@ class App extends Component {
       pageExpenses: this.state.pageExpenses,
       pageReport: this.state.pageReport,
       reports: this.state.reports,
+      setReportId: this.handleSetReportId,
       setAddress: this.handleSetAddress,
       setPrice: this.handleSetPrice,
       setDownPayment: this.handleSetDownPayment,
@@ -194,6 +209,7 @@ class App extends Component {
       setPageExpenses: this.handlePageExpenses,
       setPageReport: this.handlePageReport,
       addReport: this.handleAddReport,
+      setReports: this.handleSetReports,
     }
 
     return (

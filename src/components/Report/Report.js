@@ -153,7 +153,7 @@ class Report extends Component {
                         </tr>
                     </tbody>
                 </table>
-                <ReportForm />
+                {this.context.reportId ? '' : <ReportForm />}
                 <Link to="/">
                     <button className="button-start-new">Start new report</button>
                 </Link>

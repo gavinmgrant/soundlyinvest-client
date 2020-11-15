@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import config from '../../config';
+import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
 import './Reports.css';
 
 class Reports extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            reports: [],
-            error: null
+            error: null,
         }
     };
+
+    static contextType = SoundlyInvestContext;
 
     componentDidMount() {
         fetch(`${config.API_ENDPOINT}/reports`, {
@@ -26,19 +28,17 @@ class Reports extends Component {
                 return res.json();
             })
             .then(data => {
-                this.handleReports(data)
+                this.context.setReports(data);
             })
             .catch(error => {
                 this.setState({
                     error: 'Cannot get reports at this time.'
                 });
-            }) 
+            })
     }
 
-    handleReports = rpts => {
-        this.setState({
-            reports: rpts
-        })
+    updateId = (id) => {
+        this.context.setReportId(id)
     };
 
     render() {
@@ -47,18 +47,20 @@ class Reports extends Component {
                 <h1 className="reports-list-title">Saved Reports</h1>
                 <p>{this.error}</p>
                 <ul>
-                    {this.state.reports.map(report =>
+                    {this.context.reports.map(report =>
                         <li
                             key={report.id}
                             className="report-item"
                         >
                             <h3>{report.report_name}</h3>
-                            <p>{report.date_created.slice(0, 10)}</p>
                             <p>{report.prop_address}</p>
                             <p>$ {report.purchase_price}</p>
-                            <button>
-                                Go to details
-                            </button>
+                                <Link 
+                                    to={`/reports/${report.id}`}
+                                    onClick={() => this.updateId(report.id)}
+                                >
+                                    View report
+                                </Link>
                         </li>)}
                 </ul>
             </div>

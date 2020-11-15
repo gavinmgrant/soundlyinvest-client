@@ -1,6 +1,7 @@
 import React from 'react';
 
 const SoundlyInvestContext = React.createContext({
+    reportid: 0,
     propAddress: '',
     purchasePrice: '',
     downPayment: '',
