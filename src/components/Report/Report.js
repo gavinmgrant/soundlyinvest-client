@@ -9,6 +9,7 @@ import { DownPaymentAmount, MonthlyLoanPayment, TotalIncome, TaxAmount, VacancyA
 class Report extends Component {
     constructor(props) {
         super(props);
+        this.handleDeleteReport = this.handleDeleteReport.bind(this);
         this.state = {
             error: null,
         }
