@@ -5,6 +5,8 @@ import config from '../../config';
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
 
 class SavedReport extends Component {
+    _isMounted = false;
+
     constructor(props) {
         super(props);
         this.state = {
@@ -15,9 +17,8 @@ class SavedReport extends Component {
     static contextType = SoundlyInvestContext;
 
     componentDidMount() {
-        if (!this.context.reportId) {
-            this.props.history.push('/reports');
-        }
+        this._isMounted = true;
+
         fetch(`${config.API_ENDPOINT}/reports/${this.context.reportId}`, {
             method: 'GET',
                 headers: {
@@ -48,10 +49,17 @@ class SavedReport extends Component {
                 this.context.setVacancyRate(data.vacancy_rate);
             })
             .catch(error => {
-                this.setState({
-                    error: 'Cannot get report at this time.'
-                });
+                if (this._isMounted) {
+                    this.setState({
+                        error: 'Cannot get report at this time.'
+                    });
+                }
             })
+    }
+
+    componentWillUnmount() {
+        // cancel all subscriptions and asynchronous tasks when unmounted
+        this._isMounted = false;
     }
 
     render() {

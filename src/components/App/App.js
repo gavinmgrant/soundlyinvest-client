@@ -163,7 +163,13 @@ class App extends Component {
     this.setState({
       reports: rpts
     })
-  }
+  };
+
+  handleDeleteReport = id => {
+    this.setState({
+      reports: this.state.reports.filter(report => report.id !== id)
+    })
+  };
 
   render() {
     const value = {
@@ -200,7 +206,7 @@ class App extends Component {
       setTaxRate: this.handleTaxRate,
       setPropertyManager: this.handlePropertyManager,
       setInsurance: this.handleInsurance,
-      setUtilities: this.handleUtilities,
+      setUtilities: this.handleUtilities, 
       setGardener: this.handleGardener,
       setMiscellaneous: this.handleMiscellaneous,
       setVacancyRate: this.handleVacancyRate,
@@ -210,6 +216,7 @@ class App extends Component {
       setPageReport: this.handlePageReport,
       addReport: this.handleAddReport,
       setReports: this.handleSetReports,
+      deleteReport: this.handleDeleteReport,
     }
 
     return (

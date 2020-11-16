@@ -1,19 +1,55 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import config from '../../config';
 import ReportForm from '../ReportForm/ReportForm'
 import './Report.css'
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
 import { DownPaymentAmount, MonthlyLoanPayment, TotalIncome, TaxAmount, VacancyAmount, TotalExpenses, GRM, MonthlyNOI, YearlyNOI, CashFlow, CapRate } from '../../utils/Calculations';
 
 class Report extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            error: null,
+        }
+    };
+
     static contextType = SoundlyInvestContext;
 
     componentDidMount() {
         this.context.setPageReport(true);
+        if (!this.context.reportId) {
+            this.props.history.push('/reports');
+        }
     }
 
     componentWillUnmount() {
         this.context.setPageReport(false);
+    }
+
+    // deletes selected report from the database
+    handleDeleteReport(e) {
+        e.preventDefault();
+
+        fetch(`${config.API_ENDPOINT}/reports/${this.context.reportId}`, {
+            method: 'DELETE',
+                headers: {
+                    'content-type': 'application/json'
+                }
+        })
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(`Could not delete report number ${this.context.reportId}`)
+                }
+                return;
+            })
+            .then(data => { 
+                this.context.deleteReport(this.context.reportId);
+                this.props.history.push('/reports');
+            })
+            .catch(error => {
+                console.error({ error })
+            })
     }
 
     render() {
@@ -32,8 +68,7 @@ class Report extends Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Address</td>
-                            <td>{this.context.propAddress ? this.context.propAddress : 'Not provided'}</td>
+                            <th colSpan="2">{this.context.propAddress ? this.context.propAddress : 'Not provided'}</th>
                         </tr>
                     </tbody>
                     <thead>
@@ -154,9 +189,18 @@ class Report extends Component {
                     </tbody>
                 </table>
                 {this.context.reportId ? '' : <ReportForm />}
-                <Link to="/">
-                    <button className="button-start-new">Start new report</button>
-                </Link>
+                <section className="report-buttons">
+                    <Link to="/">
+                        <button className="button-start-new">Start new report</button>
+                    </Link>
+                    <button 
+                        disabled={this.isLoading}
+                        className="button-delete"
+                        onClick={this.handleDeleteReport}
+                    >
+                        Delete report
+                    </button>
+                </section>
             </div>
         );
     }

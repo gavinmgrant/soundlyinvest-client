@@ -9,12 +9,16 @@ class Reports extends Component {
         super(props);
         this.state = {
             error: null,
+            isLoading: false,
         }
     };
 
     static contextType = SoundlyInvestContext;
 
     componentDidMount() {
+        this.setState({ 
+            isLoading: true 
+        });
         fetch(`${config.API_ENDPOINT}/reports`, {
             method: 'GET',
                 headers: {
@@ -29,6 +33,9 @@ class Reports extends Component {
             })
             .then(data => {
                 this.context.setReports(data);
+                this.setState({
+                    isLoading: false
+                });
             })
             .catch(error => {
                 this.setState({
@@ -45,9 +52,11 @@ class Reports extends Component {
         return (
             <div className="reports-list">
                 <h1 className="reports-list-title">Saved Reports</h1>
+                <p>{this.state.isLoading ? 'Loading reports...' : ''}</p>
                 <p>{this.error}</p>
                 <ul>
-                    {this.context.reports.map(report =>
+                    {!this.state.isLoading ?
+                    this.context.reports.map(report =>
                         <li
                             key={report.id}
                             className="report-item"
@@ -61,7 +70,8 @@ class Reports extends Component {
                                 >
                                     View report
                                 </Link>
-                        </li>)}
+                        </li>)
+                    : ''}
                 </ul>
             </div>
         )
