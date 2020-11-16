@@ -19,9 +19,9 @@ class Report extends Component {
 
     componentDidMount() {
         this.context.setPageReport(true);
-        if (!this.context.reportId) {
+        /*if (!this.context.reportId) {
             this.props.history.push('/reports');
-        }
+        }*/
     }
 
     componentWillUnmount() {
@@ -69,7 +69,7 @@ class Report extends Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <th colSpan="2">{this.context.propAddress ? this.context.propAddress : 'Not provided'}</th>
+                            <th colSpan="2">{this.context.propAddress ? this.context.propAddress : <Link to="/">No address provided. Start new report.</Link>}</th>
                         </tr>
                     </tbody>
                     <thead>
@@ -194,13 +194,15 @@ class Report extends Component {
                     <Link to="/">
                         <button className="button-start-new">Start new report</button>
                     </Link>
-                    <button 
-                        disabled={this.isLoading}
-                        className="button-delete"
-                        onClick={this.handleDeleteReport}
-                    >
-                        Delete report
-                    </button>
+                    {this.context.reportId ? 
+                        <button 
+                            disabled={this.isLoading}
+                            className="button-delete"
+                            onClick={this.handleDeleteReport}
+                        >
+                            Delete report
+                        </button>
+                    : '' }
                 </section>
             </div>
         );
