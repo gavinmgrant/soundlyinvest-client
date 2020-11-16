@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom'
+import { BrowserRouter, NavLink } from 'react-router-dom'
 import './Footer.css';
 
 class Footer extends Component {
@@ -11,9 +11,9 @@ class Footer extends Component {
               Saved Reports
             </NavLink>
           </section>
-          <section className='copyright'>
-              © 2020 <a href='https://gavingrant.dev/' target='_blank' rel='noopener noreferrer'>Gavin Grant</a>
-          </section>
+        <section className='copyright'>
+            © 2020 <a href='https://gavingrant.dev/' target='_blank' rel='noopener noreferrer'>Gavin Grant</a>
+        </section>
       </nav>
     );
   }

@@ -12,7 +12,7 @@ import SavedReport from '../SavedReport/SavedReport';
 class Main extends Component {
   render() {
     return (
-      <nav className="main">
+      <div className="main">
         <Switch>
           <Route exact path="/" component={Landing}/>
           <Route path="/income" component={Income} />
@@ -22,7 +22,7 @@ class Main extends Component {
           <Route exact path="/reports" component={Reports} />
           <Route path="/reports/:id/" component={SavedReport} />
         </Switch>
-      </nav>
+      </div>
     );
   }
 }

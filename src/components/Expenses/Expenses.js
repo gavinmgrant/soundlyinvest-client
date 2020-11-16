@@ -85,7 +85,7 @@ class Expenses extends Component {
 
     render() {
         return (
-            <div className="expenses">
+            <div className="expenses">   
                 <h3>
                     Enter projected monthly expenses below:
                 </h3>
