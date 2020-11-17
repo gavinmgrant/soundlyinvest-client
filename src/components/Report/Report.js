@@ -62,11 +62,6 @@ class Report extends Component {
                             <th colSpan="2" className="report-title">Investment Property Report</th>
                         </tr>
                     </thead>
-                    <thead>
-                        <tr>
-                            <th colSpan="2">Subject Property</th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <tr>
                             <th colSpan="2">{this.context.propAddress ? this.context.propAddress : <Link to="/">No address provided. Start new report.</Link>}</th>
