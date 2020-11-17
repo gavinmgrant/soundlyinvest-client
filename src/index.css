@@ -71,6 +71,9 @@ a:visited {
 input {
   width: 100%;
   box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 input,
