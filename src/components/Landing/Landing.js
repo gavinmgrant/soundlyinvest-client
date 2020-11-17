@@ -25,7 +25,6 @@ function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
           Soundly invest in a rental property by running the numbers.
         </p>
         <form className="landing-form">
-          <label htmlFor="address">Start by entering an address: </label>
           <PlacesAutoComplete />
           <Link to={!context.propAddress ? "/" : "/purchase"}>
             <input className="submit-button" type="submit" value="Next" disabled={validateAddress()}/>
