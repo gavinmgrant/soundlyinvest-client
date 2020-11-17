@@ -59,7 +59,7 @@ class Report extends Component {
                 <table className="report-table">
                     <thead>
                         <tr>
-                            <th colSpan="2" className="report-title">Investment Property Report</th>
+                            <th colSpan="2" className="report-title"><h2>Investment Property Report</h2></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -69,7 +69,7 @@ class Report extends Component {
                     </tbody>
                     <thead>
                         <tr>
-                            <th colSpan="2">Purchase Information</th>
+                            <th colSpan="2"><h3>Purchase Information</h3></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -90,13 +90,13 @@ class Report extends Component {
                             <td>{this.context.loanPeriod} years</td>
                         </tr>
                         <tr>
-                            <td>Monthly Payment</td>
-                            <td>$ {this.context.loanPeriod && this.context.interestRate && this.context.downPayment && this.context.purchasePrice ? <MonthlyLoanPayment /> : ' Cannot calculate'}</td>
+                            <td><b>Monthly Payment</b></td>
+                            <td><b>$ {this.context.loanPeriod && this.context.interestRate && this.context.downPayment && this.context.purchasePrice ? <MonthlyLoanPayment /> : ' Cannot calculate'}</b></td>
                         </tr>
                     </tbody>
                     <thead>
                         <tr>
-                            <th colSpan="2">Monthly Income</th>
+                            <th colSpan="2"><h3>Monthly Income</h3></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -113,13 +113,13 @@ class Report extends Component {
                             <td>$ {this.context.parkingIncome}</td>
                         </tr>
                         <tr>
-                            <td>Total Income</td>
-                            <td>$ <TotalIncome /></td>
+                            <td><b>Total Income</b></td>
+                            <td><b>$ <TotalIncome /></b></td>
                         </tr>
                     </tbody>
                     <thead>
                         <tr>
-                            <th colSpan="2">Monthly Expenses</th>
+                            <th colSpan="2"><h3>Monthly Expenses</h3></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -152,13 +152,13 @@ class Report extends Component {
                             <td>$ <VacancyAmount /></td>
                         </tr>
                         <tr>
-                            <td>Total Expenses</td>
-                            <td>$ <TotalExpenses /></td>
+                            <td><b>Total Expenses</b></td>
+                            <td><b>$ <TotalExpenses /></b></td>
                         </tr>
                     </tbody>
                     <thead>
                         <tr>
-                            <th colSpan="2">Investment Analytics</th>
+                            <th colSpan="2"><h3>Investment Analytics</h3></th>
                         </tr>
                     </thead>
                     <tbody>

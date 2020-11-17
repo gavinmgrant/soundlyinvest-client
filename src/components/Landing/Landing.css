@@ -3,17 +3,40 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     text-align: center;
-    padding: 10px 20px 10px 20px;
+    padding: 80px 20px 60px 20px;
 }
 
-.landing-form {
-    width: 90%;
-    min-width: 280px;
+.landing-title {
+    margin-bottom: 0;
+}
+
+.landing-steps {
+    margin: 30px;
     max-width: 600px;
 }
 
+.landing-form-title {
+    margin: 30px 0 0 0;
+}
+
+.landing-form {
+    margin: 20px;
+    width: 100%;
+}
+
 .places-auto {
-    width: 90%;
+    width: 100%;
+    min-width: 200px;
+}
+
+@media screen and (min-width: 640px) {
+    .landing {
+        padding: 100px 20px 40px 20px;  
+    }
+
+    .places-auto {
+        width: 70%;
+        max-width: 500px;
+    }
 }
