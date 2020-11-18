@@ -44,7 +44,7 @@ class Report extends Component {
                 }
                 return;
             })
-            .then(data => { 
+            .then(() => { 
                 this.context.deleteReport(this.context.reportId);
                 this.props.history.push('/reports');
             })
@@ -59,7 +59,7 @@ class Report extends Component {
                 <table className="report-table">
                     <thead>
                         <tr>
-                            <th colSpan="2" className="report-title"><h2>Investment Property Report</h2></th>
+                            <th colSpan="2"><h1>Investment Property Report</h1></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -69,7 +69,7 @@ class Report extends Component {
                     </tbody>
                     <thead>
                         <tr>
-                            <th colSpan="2"><h3>Purchase Information</h3></th>
+                            <th colSpan="2"><h2>Purchase Information</h2></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -96,7 +96,7 @@ class Report extends Component {
                     </tbody>
                     <thead>
                         <tr>
-                            <th colSpan="2"><h3>Monthly Income</h3></th>
+                            <th colSpan="2"><h2>Monthly Income</h2></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -119,7 +119,7 @@ class Report extends Component {
                     </tbody>
                     <thead>
                         <tr>
-                            <th colSpan="2"><h3>Monthly Expenses</h3></th>
+                            <th colSpan="2"><h2>Monthly Expenses</h2></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -158,7 +158,7 @@ class Report extends Component {
                     </tbody>
                     <thead>
                         <tr>
-                            <th colSpan="2"><h3>Investment Analytics</h3></th>
+                            <th colSpan="2"><h2>Investment Analytics</h2></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -199,6 +199,14 @@ class Report extends Component {
                         </button>
                     : '' }
                 </section>
+                {this.context.reportId ? 
+                        <Link 
+                            to={`/edit-report/${this.context.reportId}`}
+                            className="button-edit"
+                        >
+                            Edit Report
+                        </Link>
+                    : '' }
             </div>
         );
     }

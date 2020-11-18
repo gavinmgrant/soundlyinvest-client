@@ -171,6 +171,14 @@ class App extends Component {
     })
   };
 
+  handleUpdateReport = updatedReport => {
+    this.setState({
+      reports: this.state.reports.map(report => 
+          (report.id !== updatedReport.id) ? report : updatedReport
+      )
+    })
+  }
+
   render() {
     const value = {
       reportId: this.state.reportId,
@@ -217,6 +225,7 @@ class App extends Component {
       addReport: this.handleAddReport,
       setReports: this.handleSetReports,
       deleteReport: this.handleDeleteReport,
+      updateReport: this.handleUpdateReport,
     }
 
     return (

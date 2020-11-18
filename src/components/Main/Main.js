@@ -8,6 +8,7 @@ import Purchase from '../Purchase/Purchase';
 import Report from '../Report/Report';
 import Reports from '../Reports/Reports';
 import SavedReport from '../SavedReport/SavedReport';
+import EditReport from '../EditReport/EditReport';
 
 class Main extends Component {
   render() {
@@ -21,6 +22,7 @@ class Main extends Component {
           <Route path="/report" component={Report} />
           <Route exact path="/reports" component={Reports} />
           <Route path="/reports/:id/" component={SavedReport} />
+          <Route path="/edit-report/:id/" component={EditReport} />
         </Switch>
       </div>
     );

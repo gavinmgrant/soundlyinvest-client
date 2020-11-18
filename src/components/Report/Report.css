@@ -15,10 +15,6 @@
     max-width: 640px;
 }
 
-.report-title {
-    font-size: 28px;
-}
-
 table {
     border-collapse: collapse;
 }
@@ -43,6 +39,10 @@ tfoot {
     background-color: #222222;
     color: #fff;
     margin-top: 40px;
+}
+
+.button-edit {
+    margin: 10px;
 }
 
 @media screen and (min-width: 640px) {

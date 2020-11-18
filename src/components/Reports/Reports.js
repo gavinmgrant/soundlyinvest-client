@@ -61,7 +61,7 @@ class Reports extends Component {
                             key={report.id}
                             className="report-item"
                         >
-                            <h3>{report.report_name}</h3>
+                            <h2>{report.report_name}</h2>
                             <p>{report.prop_address}</p>
                             <p>$ {report.purchase_price}</p>
                                 <Link 
