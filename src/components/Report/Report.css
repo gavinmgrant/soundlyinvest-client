@@ -44,6 +44,10 @@ tfoot {
     margin: 10px;
 }
 
+.report-button {
+    margin-top: 20px;
+}
+
 @media screen and (min-width: 640px) {
     .report {
         padding: 100px 20px 40px 20px;  
