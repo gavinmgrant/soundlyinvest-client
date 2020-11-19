@@ -4,7 +4,8 @@
 }
 
 html {
-  background-color: #f7f7f7;
+  background-color: #ffffff;
+  color: #393F4D;
   margin: 0;
   height: 100%;
 }
@@ -55,8 +56,12 @@ form {
 }
 
 a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
+}
+
+a:hover {
+  color: #393F4D;
 }
 
 a:hover,
@@ -66,7 +71,7 @@ button:hover {
 }
 
 a:visited {
-  color: #000000;
+  color: #ffffff;
 }
 
 input {
@@ -89,7 +94,9 @@ button {
   margin: 5px 10px 20px 10px;
   padding: 12px 20px;
   font-size: 16px;
-  border: 1px solid #000000;
+  color: #FE5E54;
+  border: 2px solid #FE5E54;
+  background: none;
   border-radius: 100px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
@@ -102,8 +109,18 @@ button,
 
 button:hover,
 input[type=submit]:hover {
-  color: #fff;
-  background-color: #000000;
+  color: #ffffff;
+  background-color: #FE5E54;
+}
+
+.button-invert {
+  color: #ffffff;
+  background-color: #FE5E54;
+}
+
+.button-invert:hover {
+  color: #FE5E54;
+  background-color: #ffffff;
 }
 
 .submit-button {
@@ -125,16 +142,16 @@ ul {
 .demo {
   margin: 20px 0px;
   padding: 20px;
-  color: #000000;
-  background: #ffffff;
+  color: #ffffff;
+  background: #00C9B8;
   border-radius: 5px;
 }
 
 .error {
   margin: 20px 0px;
   padding: 20px;
-  color: red;
-  background: #ffffff;
+  color: #ffffff;
+  background: #FE5E54;
   border-radius: 5px;
   text-align: center;
 }

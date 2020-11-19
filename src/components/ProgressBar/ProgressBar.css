@@ -3,7 +3,8 @@
     margin: 0;
     display: flex;
     justify-content: space-evenly;
-    background-color: #bbbbbb;
+    color: #36008D;
+    background-color: #ffffff;
     padding: 3px 7px 3px 7px;
     border-radius: 100px;
 }

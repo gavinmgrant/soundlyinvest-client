@@ -12,6 +12,14 @@
     margin: 0 0 40px 0;
 }
 
+.view-report {
+    color: #36008D;
+}
+
+.view-report:visited {
+    color: #36008D;
+}
+
 @media screen and (min-width: 640px) {
     .reports-list {
         padding: 100px 20px 40px 20px;  

@@ -28,32 +28,34 @@ function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
   if (isScriptLoaded && isScriptLoadSucceed) {
     return (
       <div className="landing">
-        <h1 className="landing-title">
-          SoundlyInvest
-        </h1>
-        <section className="landing-steps">
-          <p>
-            Soundly invest in a rental property by running the numbers. In three steps, you get a detailed investment report displaying key investment metrics, such as gross rent multiplier, cap rate, net operating income, and cash flow.
-          </p>
-        </section>
         {TokenService.hasAuthToken() ? '' :
-          <div className="steps">
+          <>
+            <h1 className="landing-title">
+              SoundlyInvest
+            </h1>
             <section className="landing-steps">
-              <h2>1. Purchase Information</h2>
-              <p>Provide details about your property purchase.</p>
+              <p>
+                Soundly invest in a rental property by running the numbers. In three steps, you get a detailed investment report displaying key investment metrics, such as gross rent multiplier, cap rate, net operating income, and cash flow.
+              </p>
             </section>
-            <section className="landing-steps">
-              <h2>2. Monthly Income</h2>
-              <p>Provide potential income you can earn from rents.</p>
-            </section>
-            <section className="landing-steps">
-              <h2>3. Monthly Expenses</h2>
-              <p>Provide potential expenses to operate this investment property.</p>
-            </section>
-            <Link to="/login">
-              <input className="submit-button" type="submit" value="Login" />
-            </Link>
-          </div>
+            <div className="steps">
+              <section className="landing-steps">
+                <h2>1. Purchase Information</h2>
+                <p>Provide details about your property purchase.</p>
+              </section>
+              <section className="landing-steps">
+                <h2>2. Monthly Income</h2>
+                <p>Provide potential income you can earn from rents.</p>
+              </section>
+              <section className="landing-steps">
+                <h2>3. Monthly Expenses</h2>
+                <p>Provide potential expenses to operate this investment property.</p>
+              </section>
+              <Link to="/login">
+                <input className="submit-button" type="submit" value="Login" />
+              </Link>
+            </div>
+          </>
         }
         {TokenService.hasAuthToken() ? 
           <form className="landing-form">

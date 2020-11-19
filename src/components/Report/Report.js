@@ -20,11 +20,20 @@ class Report extends Component {
 
     componentDidMount() {
         this.context.setPageReport(true);
-    }
+    };
+
+    cellWarning() {
+        let cashFlow = <CashFlow />;
+        if (cashFlow < 0) {
+            return '#FE5E54';
+        } else {
+            return '#ffffff';
+        }
+    };
 
     componentWillUnmount() {
         this.context.setPageReport(false);
-    }
+    };
 
     // deletes selected report from the database
     handleDeleteReport(e) {
@@ -179,14 +188,17 @@ class Report extends Component {
                         </tr>
                         <tr>
                             <td>Monthly Cash Flow</td>
-                            <td>$ {<MonthlyNOI /> === 0 && <MonthlyLoanPayment /> === 0 ? 'Cannot calculate' : <CashFlow />}</td>
+                            <td
+                                style={{ backgroundColor: this.cellWarning }}
+                            >
+                                $ {<MonthlyNOI /> === 0 && <MonthlyLoanPayment /> === 0 ? 'Cannot calculate' : <CashFlow />}</td>
                         </tr>
                     </tbody>
                 </table>
                 {this.context.reportId ? '' : <ReportForm />}
                 <section className="report-buttons">
                     <Link to="/">
-                        <button className="button-start-new">Start new report</button>
+                        <button className="button-invert">Start new report</button>
                     </Link>
                     {this.context.reportId ? 
                         <button 

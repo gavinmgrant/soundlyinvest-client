@@ -80,6 +80,7 @@ class Reports extends Component {
                                 <Link 
                                     to={`/reports/${report.id}`}
                                     onClick={() => this.updateId(report.id)}
+                                    className="view-report"
                                 >
                                     View report
                                 </Link>

@@ -10,7 +10,7 @@
 .report-table {
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid #666666;
+    border: 1px solid #36008D;
     width: 80%;
     max-width: 640px;
 }
@@ -21,7 +21,7 @@ table {
 
 td,
 th {
-    border: 1px solid #666666;
+    border: 1px solid #36008D;
     padding: 10px;
 }
 
@@ -31,17 +31,17 @@ td {
   
 thead,
 tfoot {
-    background-color: #666666;
-    color: #fff;
-}
-
-.button-start-new {
-    background-color: #222222;
+    background-color: #36008D;
     color: #fff;
 }
 
 .button-edit {
     margin: 10px;
+    color: #36008D;
+}
+
+.button-edit:visited {
+    color: #36008D;
 }
 
 .report-buttons {
