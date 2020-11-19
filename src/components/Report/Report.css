@@ -44,8 +44,8 @@ tfoot {
     margin: 10px;
 }
 
-.report-button {
-    margin-top: 20px;
+.report-buttons {
+    margin-top: 30px;
 }
 
 @media screen and (min-width: 640px) {
