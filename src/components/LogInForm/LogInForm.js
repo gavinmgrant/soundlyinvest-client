@@ -61,7 +61,7 @@ export default class LoginForm extends Component {
         const { error } = this.state
         return (
             <section className='login-container'>
-                <h2>Log In</h2>
+                <h2>Login</h2>
                 <p>Please log in below to start a report or view your saved reports.</p>
                 <p>To register for an account, click the register button above.</p>
                 <section className="demo">

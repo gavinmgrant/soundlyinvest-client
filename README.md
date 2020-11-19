@@ -1,6 +1,41 @@
 # SoundlyInvest
 
-SoundlyInvest is a React.js app that helps you soundly invest in a rental property by running the numbers.
+SoundlyInvest is a React.js app that helps you soundly invest in a rental property by running the numbers. In three steps, you get a detailed investment report displaying key investment metrics, such as gross rent multiplier, cap rate, net operating income, and cash flow.
+
+## Live App
+
+See a live version of this app here: [soundlyinvest.com](https://soundlyinvest.com/).
+
+## SoundlyInvest Server
+
+View the server side code in this [GitHub repo](https://github.com/gavinmgrant/soundlyinvest-api).
+
+## Technology
+
+* [JavaScript ES6](https://www.javascript.com/) - Programming language
+* [React](https://reactjs.org/) - JS library for UI
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Stylesheet language
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Markup language
+* [a11y](https://www.a11yproject.com/) - Accessibility
+* [Vercel](https://vercel.com/) - Cloud platform for deployment
+
+## User Flow
+
+Users arrive on a landing page that explains the app and directs users to log in.<br>
+
+After clicking the login button, the user can login using the login form or go to register by clicking the button in the header.<br>
+
+Users begin by entering a property address.<br>
+
+The first step is entering details about the property purchase.<br>
+
+The second step is entering potential income users can earn from rents.<br>
+
+The third step is entering potential expenses to operate this investment property.<br>
+
+Finally, a report is generating that provides investment metrics<br>
+
+Users can save this report, view saved reports, edit saved reports, or delete reports.<br>
 
 ## Available Scripts
 
