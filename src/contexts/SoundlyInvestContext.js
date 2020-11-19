@@ -25,6 +25,8 @@ const SoundlyInvestContext = React.createContext({
     addReport: () => {},
     deleteReport: () => {},
     updateReport: () => {},
+    setUserId: () => {},
+    setUserName: () => {},
 });
 
 export default SoundlyInvestContext;

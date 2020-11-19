@@ -1,0 +1,25 @@
+.registration-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 90px 20px 10px 20px;
+}
+
+.registration-list {
+    text-align: left;
+    margin-left: 20%;
+    list-style-type: decimal;
+}
+
+@media screen and (min-width: 640px) {
+    .registration-container {
+        padding: 100px 20px 40px 20px;  
+    }
+
+    .registration-list {  
+        margin-left: 25%;
+    }
+}

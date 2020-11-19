@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import config from '../../config';
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
+import TokenService from '../../services/token-service';
+import AuthApiService from '../../services/auth-api-service';
+import IdleService from '../../services/idle-service';
 import './Reports.css';
 
 class Reports extends Component {
@@ -22,7 +25,8 @@ class Reports extends Component {
         fetch(`${config.API_ENDPOINT}/reports`, {
             method: 'GET',
                 headers: {
-                    'content-type': 'application/json'
+                    'content-type': 'application/json',
+                    'authorization': `bearer ${TokenService.getAuthToken()}`,
                 }
         })
             .then(res => {
@@ -42,6 +46,15 @@ class Reports extends Component {
                     error: 'Cannot get reports at this time.'
                 });
             })
+
+        IdleService.setIdleCallback(this.logoutFromIdle)
+
+        if (TokenService.hasAuthToken()) {
+            IdleService.regiserIdleTimerResets()
+            TokenService.queueCallbackBeforeExpiry(() => {
+            AuthApiService.postRefreshToken()
+            })
+        }
     }
 
     updateId = (id) => {

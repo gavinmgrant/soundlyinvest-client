@@ -122,6 +122,23 @@ ul {
   padding: 3px;
 }
 
+.demo {
+  margin: 20px 0px;
+  padding: 20px;
+  color: #000000;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.error {
+  margin: 20px 0px;
+  padding: 20px;
+  color: red;
+  background: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+}
+
 @media screen and (min-width: 640px) {
   h1 {
     font-size: 46px;

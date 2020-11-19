@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import config from '../../config';
 import './ReportForm.css'
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
+import TokenService from '../../services/token-service';
 
 class ReportForm extends Component {
     static contextType = SoundlyInvestContext;
@@ -51,6 +52,7 @@ class ReportForm extends Component {
             body: JSON.stringify(newReport),
             headers: {
                 'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`,
             }
         })
         .then(res => {

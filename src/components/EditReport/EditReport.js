@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import config from '../../config';
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
+import TokenService from '../../services/token-service';
 import './EditReport.css'
 
 class EditReport extends Component {
@@ -38,7 +39,8 @@ class EditReport extends Component {
         fetch(`${config.API_ENDPOINT}/reports/${this.context.reportId}`, {
             method: 'GET',
                 headers: {
-                    'content-type': 'application/json'
+                    'content-type': 'application/json',
+                    'authorization': `bearer ${TokenService.getAuthToken()}`,
                 }
         })
             .then(res => {

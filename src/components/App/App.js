@@ -30,6 +30,8 @@ class App extends Component {
         pageExpenses: false,
         pageReport: false,
         reports: [],
+        userId: 1,
+        userName: null,
       }
   };
 
@@ -179,6 +181,18 @@ class App extends Component {
     })
   }
 
+  handleSetUserId = id => {
+    this.setState({
+      userId: id
+    })
+  };
+
+  handleSetUserName = name => {
+    this.setState({
+      userName: name
+    })
+  };
+
   render() {
     const value = {
       reportId: this.state.reportId,
@@ -202,6 +216,8 @@ class App extends Component {
       pageExpenses: this.state.pageExpenses,
       pageReport: this.state.pageReport,
       reports: this.state.reports,
+      userId: this.state.userId,
+      userName: this.state.userName,
       setReportId: this.handleSetReportId,
       setAddress: this.handleSetAddress,
       setPrice: this.handleSetPrice,
@@ -226,6 +242,8 @@ class App extends Component {
       setReports: this.handleSetReports,
       deleteReport: this.handleDeleteReport,
       updateReport: this.handleUpdateReport,
+      setUserId: this.handleSetUserId,
+      setUserName: this.handleSetUserName,
     }
 
     return (

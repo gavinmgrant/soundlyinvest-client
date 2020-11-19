@@ -5,6 +5,7 @@ import ReportForm from '../ReportForm/ReportForm'
 import './Report.css'
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
 import { DownPaymentAmount, MonthlyLoanPayment, TotalIncome, TaxAmount, VacancyAmount, TotalExpenses, GRM, MonthlyNOI, YearlyNOI, CashFlow, CapRate } from '../../utils/Calculations';
+import TokenService from '../../services/token-service';
 
 class Report extends Component {
     constructor(props) {
@@ -35,7 +36,8 @@ class Report extends Component {
         fetch(`${config.API_ENDPOINT}/reports/${this.context.reportId}`, {
             method: 'DELETE',
                 headers: {
-                    'content-type': 'application/json'
+                    'content-type': 'application/json',
+                    'authorization': `bearer ${TokenService.getAuthToken()}`,
                 }
         })
             .then(res => {

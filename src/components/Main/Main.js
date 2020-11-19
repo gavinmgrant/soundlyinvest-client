@@ -9,6 +9,9 @@ import Report from '../Report/Report';
 import Reports from '../Reports/Reports';
 import SavedReport from '../SavedReport/SavedReport';
 import EditReport from '../EditReport/EditReport';
+import RegistrationForm from '../RegistrationForm/RegistrationForm';
+import PrivateRoute from '../../utils/PrivateRoute';
+import PublicOnlyRoute from '../../utils/PublicOnlyRoute';
 
 class Main extends Component {
   render() {
@@ -16,13 +19,14 @@ class Main extends Component {
       <div className="main">
         <Switch>
           <Route exact path="/" component={Landing}/>
-          <Route path="/income" component={Income} />
-          <Route path="/expenses" component={Expenses} />
-          <Route path="/purchase" component={Purchase} />
-          <Route path="/report" component={Report} />
-          <Route exact path="/reports" component={Reports} />
-          <Route path="/reports/:id/" component={SavedReport} />
-          <Route path="/edit-report/:id/" component={EditReport} />
+          <PrivateRoute path="/income" component={Income} />
+          <PrivateRoute path="/expenses" component={Expenses} />
+          <PrivateRoute path="/purchase" component={Purchase} />
+          <PrivateRoute path="/report" component={Report} />
+          <PrivateRoute exact path="/reports" component={Reports} />
+          <PrivateRoute path="/reports/:id/" component={SavedReport} />
+          <PrivateRoute path="/edit-report/:id/" component={EditReport} />
+          <PublicOnlyRoute path="/register" component={RegistrationForm} />
         </Switch>
       </div>
     );
