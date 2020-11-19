@@ -20,9 +20,6 @@ class Report extends Component {
 
     componentDidMount() {
         this.context.setPageReport(true);
-        /*if (!this.context.reportId) {
-            this.props.history.push('/reports');
-        }*/
     }
 
     componentWillUnmount() {

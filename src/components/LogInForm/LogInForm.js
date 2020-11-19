@@ -46,7 +46,9 @@ export default class LoginForm extends Component {
                 }
             })
             .finally(() => {
-                this.setState({ isLoading: false })
+                if (this._isMounted) {
+                    this.setState({ isLoading: false })
+                }
             })
     };
 

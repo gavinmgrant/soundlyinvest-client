@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import PlacesAutoComplete from '../PlacesAutoComplete/PlacesAutoComplete';
 import './Landing.css';
@@ -9,6 +9,15 @@ import TokenService from '../../services/token-service';
 
 function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
   const context = useContext(SoundlyInvestContext);
+
+  useEffect(() => {
+    resetIdAndAddress();
+  }, []);
+
+  const resetIdAndAddress = () => {
+    context.setReportId(0);
+    context.setAddress('');
+  };
 
   const validateAddress = () => {
     if (!context.propAddress) {
