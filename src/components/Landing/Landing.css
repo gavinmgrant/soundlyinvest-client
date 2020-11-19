@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 80px 20px 60px 20px;
+    padding: 80px 20px 10px 20px;
 }
 
 .landing-title {
@@ -12,7 +12,7 @@
 }
 
 .landing-steps {
-    margin: 30px;
+    margin: 25px;
     max-width: 600px;
 }
 
@@ -33,10 +33,15 @@
 @media screen and (min-width: 640px) {
     .landing {
         padding: 100px 20px 40px 20px;  
+        height: 100vh;
     }
 
     .places-auto {
         width: 70%;
         max-width: 500px;
+    }
+
+    .steps {
+        display: inline;
     }
 }

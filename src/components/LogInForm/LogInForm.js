@@ -61,6 +61,7 @@ export default class LoginForm extends Component {
             <section className='login-container'>
                 <h2>Log In</h2>
                 <p>Please log in below to start a report or view your saved reports.</p>
+                <p>To register for an account, click the register button above.</p>
                 <section className="demo">
                     <p>To demo this site without registering, log in with these credentials:</p>
                     <p>username: <b>demo</b></p>

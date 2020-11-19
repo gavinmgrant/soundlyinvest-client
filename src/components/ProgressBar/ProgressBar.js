@@ -9,12 +9,6 @@ class ProgressBar extends Component {
   render() {
     return (
       <nav className="progressbar">
-        <section className="progressbar-title">
-          {this.context.pagePurchase ? 'Purchase' : ''}
-          {this.context.pageIncome ? 'Income' : ''}
-          {this.context.pageExpenses ? 'Expenses' : ''}
-          {this.context.pageReport ? 'Report' : ''}
-        </section>
         <span className="dot">{this.context.pagePurchase ? CircleSolid : CircleOpen}</span>
         <span className="arrow">{ArrowRight}</span>
         <span className="dot">{this.context.pageIncome ? CircleSolid : CircleOpen}</span>

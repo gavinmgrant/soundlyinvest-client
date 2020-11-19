@@ -10,6 +10,7 @@ import Reports from '../Reports/Reports';
 import SavedReport from '../SavedReport/SavedReport';
 import EditReport from '../EditReport/EditReport';
 import RegistrationForm from '../RegistrationForm/RegistrationForm';
+import LogInForm from '../LogInForm/LogInForm';
 import PrivateRoute from '../../utils/PrivateRoute';
 import PublicOnlyRoute from '../../utils/PublicOnlyRoute';
 
@@ -27,6 +28,7 @@ class Main extends Component {
           <PrivateRoute path="/reports/:id/" component={SavedReport} />
           <PrivateRoute path="/edit-report/:id/" component={EditReport} />
           <PublicOnlyRoute path="/register" component={RegistrationForm} />
+          <PublicOnlyRoute path="/login" component={LogInForm} />
         </Switch>
       </div>
     );

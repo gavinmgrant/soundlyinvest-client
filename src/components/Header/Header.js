@@ -17,24 +17,37 @@ class Header extends Component {
   // renders the links for when users are signed in
   renderLogoutLink() {
     return (
-      <Link
+      <div className="nav-logout">
+        <Link
           onClick={this.handleLogoutClick}
           to='/'
           style={{ textDecoration: 'none' }}
-      >
-        Log Out
-      </Link>
+          className="nav-text"
+        >
+          Logout
+        </Link>
+      </div>
     )
   }
 
-  renderRegisterLink() {
+  renderLoginLink() {
     return (
-      <Link
+      <div className="nav-login">
+        <Link
           to='/register'
           style={{ textDecoration: 'none' }}
-      >
-        Register
-      </Link>
+          className="nav-text"
+        >
+          Register
+        </Link>
+        <Link
+          to='/login'
+          style={{ textDecoration: 'none' }}
+          className="nav-text"
+        >
+          Login
+        </Link>
+      </div>
     )
   }
 
@@ -44,8 +57,8 @@ class Header extends Component {
           <Link to="/" style={{ textDecoration: 'none' }}>
             <h2 className="title">SoundlyInvest</h2>
           </Link>
-          {TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderRegisterLink()}
-          <ProgressBar />
+          {TokenService.hasAuthToken() ? <ProgressBar className="header-progress"/> : ''}
+          {TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}
       </div>
     );
   }

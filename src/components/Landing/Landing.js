@@ -5,7 +5,6 @@ import './Landing.css';
 import scriptLoader from 'react-async-script-loader';
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
 import ValidationError from '../ValidationError/ValidationError';
-import LogInForm from '../LogInForm/LogInForm';
 import TokenService from '../../services/token-service';
 
 function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
@@ -29,7 +28,7 @@ function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
           </p>
         </section>
         {TokenService.hasAuthToken() ? '' :
-          <div>
+          <div className="steps">
             <section className="landing-steps">
               <h2>1. Purchase Information</h2>
               <p>Provide details about your property purchase.</p>
@@ -42,12 +41,15 @@ function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
               <h2>3. Monthly Expenses</h2>
               <p>Provide potential expenses to operate this investment property.</p>
             </section>
+            <Link to="/login">
+              <input className="submit-button" type="submit" value="Login" />
+            </Link>
           </div>
         }
-        {TokenService.hasAuthToken() ? '' : <LogInForm />}
         {TokenService.hasAuthToken() ? 
           <form className="landing-form">
             <h2 className="landing-form-title">Get Started!</h2>
+            <h3>Provide the address of the property you are evaluating:</h3>
             <PlacesAutoComplete />
             <Link to={!context.propAddress ? "/" : "/purchase"}>
               <input className="submit-button" type="submit" value="Go" disabled={validateAddress()}/>
