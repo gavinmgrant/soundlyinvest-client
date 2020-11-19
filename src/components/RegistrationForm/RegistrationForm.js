@@ -39,13 +39,13 @@ export default class RegistrationForm extends Component {
                 <h2>Register</h2>
                 <p>Registered users can create and save reports.</p>
                 <section className='demo'>
-                    <p>Your password must meet the following requirements:</p> 
+                    <p>Your password must include each of the following:</p> 
                     <ul className='registration-list'>
-                        <li>contain a upper case letter</li>
-                        <li>contain a lower case letter</li>
-                        <li>contain a number</li>
-                        <li>contain a special character</li>
-                        <li>be between 8 and 72 characters</li>
+                        <li>an upper case letter</li>
+                        <li>a lower case letter</li>
+                        <li>a number</li>
+                        <li>a special character</li>
+                        <li>between 8 and 72 characters</li>
                     </ul>
                 </section>
                 <form onSubmit={this.handleSubmit}>
@@ -68,7 +68,7 @@ export default class RegistrationForm extends Component {
                     >
                     </input>
                     <button type='submit' className='submit-button'>
-                        {!this.state.isLoading ? 'Register' : 'Success!'}
+                        {!this.state.isLoading ? 'Register' : 'Loading...'}
                     </button> 
                     <div role='alert'>
                         {error ? <p className='error'>{error}</p> : ''}

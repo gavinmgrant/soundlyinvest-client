@@ -86,7 +86,7 @@ export default class LoginForm extends Component {
                     >
                     </input>
                     <button type='submit' className='submit-button'>
-                        {!this.state.isLoading ? 'Login' : 'Success!'}
+                        {!this.state.isLoading ? 'Login' : 'Loading...'}
                     </button>
                     <div role='alert'>
                         {error ? <p className='error'>{error}</p> : ''}

@@ -6,13 +6,13 @@
     width: 100%;
     color: #ffffff;
     background-color: #36008D;
-    height: 50px;
+    height: 60px;
     font-size: 14px;
 }
 
 @media screen and (min-width: 640px) {
     .footer {
-        height: 60px;
+        height: 70px;
         font-size: 16px;
     }
 

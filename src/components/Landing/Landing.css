@@ -4,7 +4,57 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 80px 20px 10px 20px;
+    padding: 80px 20px 40px 20px;
+    animation: fadeIn ease 4s;
+    -webkit-animation: fadeIn ease 4s;
+    -moz-animation: fadeIn ease 4s;
+    -o-animation: fadeIn ease 4s;
+    -ms-animation: fadeIn ease 4s;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+@-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+@-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+@-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+@-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
 }
 
 .landing-title {
@@ -12,7 +62,7 @@
 }
 
 .landing-steps {
-    margin: 25px;
+    margin: 10px;
     max-width: 600px;
 }
 
@@ -23,6 +73,7 @@
 .landing-form {
     margin: 20px;
     width: 100%;
+    text-align: center;
 }
 
 .places-auto {
@@ -32,16 +83,16 @@
 
 @media screen and (min-width: 640px) {
     .landing {
-        padding: 100px 20px 40px 20px;  
-        height: 100vh;
+        padding: 100px 20px 40px 20px; 
+        height: 100vh; 
+    }
+
+    .landing-steps {
+        margin: 20px;
     }
 
     .places-auto {
         width: 70%;
         max-width: 500px;
-    }
-
-    .steps {
-        display: inline;
     }
 }
