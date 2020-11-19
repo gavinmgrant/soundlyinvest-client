@@ -28,18 +28,22 @@ function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
             Soundly invest in a rental property by running the numbers. In three steps, you get a detailed investment report displaying key investment metrics, such as gross rent multiplier, cap rate, net operating income, and cash flow.
           </p>
         </section>
-        <section className="landing-steps">
-          <h2>1. Purchase Information</h2>
-          <p>Provide details about your property purchase.</p>
-        </section>
-        <section className="landing-steps">
-          <h2>2. Monthly Income</h2>
-          <p>Provide potential income you can earn from rents.</p>
-        </section>
-        <section className="landing-steps">
-          <h2>3. Monthly Expenses</h2>
-          <p>Provide potential expenses to operate this investment property.</p>
-        </section>
+        {TokenService.hasAuthToken() ? '' :
+          <div>
+            <section className="landing-steps">
+              <h2>1. Purchase Information</h2>
+              <p>Provide details about your property purchase.</p>
+            </section>
+            <section className="landing-steps">
+              <h2>2. Monthly Income</h2>
+              <p>Provide potential income you can earn from rents.</p>
+            </section>
+            <section className="landing-steps">
+              <h2>3. Monthly Expenses</h2>
+              <p>Provide potential expenses to operate this investment property.</p>
+            </section>
+          </div>
+        }
         {TokenService.hasAuthToken() ? '' : <LogInForm />}
         {TokenService.hasAuthToken() ? 
           <form className="landing-form">
