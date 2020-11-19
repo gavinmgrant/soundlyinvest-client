@@ -185,7 +185,8 @@ class EditReport extends Component {
             method: 'PATCH',
             body: JSON.stringify(newReport),
             headers: {
-                'content-type': 'application/json'  
+                'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`,  
             }
         })
             .then(res => {
