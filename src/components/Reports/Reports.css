@@ -16,6 +16,10 @@
     color: #36008D;
 }
 
+.view-report:hover {
+    color: #000000 !important;
+}
+
 .view-report:visited {
     color: #36008D;
 }

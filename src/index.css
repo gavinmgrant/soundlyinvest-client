@@ -12,10 +12,17 @@ html {
 
 body {
   margin: 0;
-  font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+button,
+input,
+a,
+select {
+  font-size: 16px;
 }
 
 code {
@@ -60,10 +67,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #393F4D;
-}
-
 a:hover,
 input:hover,
 button:hover {
@@ -93,13 +96,30 @@ select,
 button {
   margin: 5px 10px 20px 10px;
   padding: 12px 20px;
-  font-size: 16px;
-  color: #FE5E54;
-  border: 2px solid #FE5E54;
-  background: none;
   border-radius: 100px;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18px;
+}
+
+input,
+select {
+  color: #36008D;
+  border: 2px solid #36008D;
+  background: none;
+}
+
+button,
+input[type=submit] {
+  color: #36008D;
+  background-color: #FFCD00;
+  border: 2px solid #FFCD00;
+  transition: 0.3s;
+}
+
+button:hover,
+input[type=submit]:hover {
+  color: #ffffff;
+  background-color: #36008D;
+  border: 2px solid #36008D;
 }
 
 button,
@@ -107,20 +127,17 @@ button,
   cursor: pointer;
 }
 
-button:hover,
-input[type=submit]:hover {
-  color: #ffffff;
-  background-color: #FE5E54;
-}
-
 .button-invert {
   color: #ffffff;
-  background-color: #FE5E54;
+  background-color: #36008D;
+  border: 2px solid #36008D;
+  transition: 0.3s;
 }
 
 .button-invert:hover {
-  color: #FE5E54;
-  background-color: #ffffff;
+  color: #36008D;
+  background-color: #FFCD00;
+  border: 2px solid #FFCD00;
 }
 
 .submit-button {
@@ -139,11 +156,15 @@ ul {
   padding: 3px;
 }
 
+.active:hover {
+  color: #FFCD00;
+}
+
 .demo {
   margin: 20px 0px;
   padding: 20px;
   color: #ffffff;
-  background: #00C9B8;
+  background: #36008D;
   border-radius: 5px;
 }
 
@@ -156,7 +177,28 @@ ul {
   text-align: center;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #36008D;
+  opacity: .7; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #36008D;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #36008D;
+}
+
 @media screen and (min-width: 640px) {
+  body,
+  button,
+  input,
+  a,
+  select {
+    font-size: 18px;
+  }
+
   h1 {
     font-size: 46px;
     margin: 20px;

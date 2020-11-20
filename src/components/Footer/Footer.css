@@ -1,13 +1,29 @@
 .footer {
     padding: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
-    color: #ffffff;
     background-color: #36008D;
     height: 60px;
     font-size: 14px;
+}
+
+.footer-nav {
+    position: absolute;
+    left: 20px;
+}
+
+.copyright {
+    position: absolute;
+    right: 20px;
+}
+
+.copyright-link:hover {
+    color: #FFCD00;
+}
+
+.saved-reports:hover {
+    color: #FFCD00;
 }
 
 @media screen and (min-width: 640px) {
@@ -17,10 +33,10 @@
     }
 
     .footer-nav {
-        margin-left: 20px;
+        left: 40px;
     }
 
     .copyright {
-        margin-right: 20px;
+        right: 40px;
     }
 }

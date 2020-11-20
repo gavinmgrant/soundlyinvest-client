@@ -2,7 +2,6 @@
     padding: 20px;
     position: fixed;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: #36008D;
@@ -25,16 +24,32 @@
     font-size: 17px;
 }
 
+.title:hover {
+    color: #FFCD00;
+}
+
+.header-progress {
+    margin: 0 0 0 0px;
+}
+
 .nav-login {
+    position: absolute;
+    right: 20px;
     font-size: 14px;
 }
 
 .nav-logout {
+    position: absolute;
+    right: 20px;
     font-size: 14px;
 }
 
 .nav-text {
     margin-left: 10px;
+}
+
+.nav-text:hover {
+    color: #FFCD00;
 }
 
 @media screen and (min-width: 640px) {
@@ -50,14 +65,18 @@
         font-size: 24px;
     }
 
+    .header-progress {
+        margin: 0 0 0 20px;
+    }
+
     .nav-login {
         font-size: 16px;
-        margin-right: 20px;
+        right: 40px;
     }
     
     .nav-logout {
         font-size: 16px;
-        margin-right: 20px;
+        right: 40px;
     }
 
     .nav-text {

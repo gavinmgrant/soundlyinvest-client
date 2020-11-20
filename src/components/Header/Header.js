@@ -61,7 +61,9 @@ class Header extends Component {
             <h2 className="title">SoundlyInvest</h2>
           </Link>
         </div>
+        <div className="header-progress">
           {TokenService.hasAuthToken() ? <ProgressBar className="header-progress"/> : ''}
+        </div>
           {TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}
       </div>
     );
