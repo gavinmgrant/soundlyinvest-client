@@ -4,6 +4,7 @@ import TokenService from '../../services/token-service';
 import IdleService from '../../services/idle-service';
 import './Header.css';
 import ProgressBar from '../ProgressBar/ProgressBar';
+import { Building } from '../../utils/Icons';
 
 class Header extends Component {
   handleLogoutClick = () => {
@@ -54,9 +55,12 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
+        <div className="header-left">
+          <div className="icon">{Building}</div>
           <Link to="/" style={{ textDecoration: 'none' }}>
             <h2 className="title">SoundlyInvest</h2>
           </Link>
+        </div>
           {TokenService.hasAuthToken() ? <ProgressBar className="header-progress"/> : ''}
           {TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}
       </div>

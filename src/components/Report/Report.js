@@ -72,7 +72,7 @@ class Report extends Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <th colSpan="2">{this.context.propAddress ? this.context.propAddress : <Link to="/">No address provided. Start new report.</Link>}</th>
+                            <th colSpan="2">{this.context.propAddress ? this.context.propAddress : "No address provided."}</th>
                         </tr>
                     </tbody>
                     <thead>
