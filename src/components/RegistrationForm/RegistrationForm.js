@@ -19,7 +19,7 @@ export default class RegistrationForm extends Component {
           user_name: user_name.value,
           password: password.value,
         })
-        .then(user => {
+        .then(() => {
             user_name.value = ''
             password.value = ''
             this.setState({ onRegistrationSuccess: true })
@@ -78,4 +78,4 @@ export default class RegistrationForm extends Component {
             </section>
         )
     }
-};
+}

@@ -36,7 +36,7 @@ function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
               SoundlyInvest
             </h1>
             <p className="landing-steps">
-              Soundly invest in a rental property by running the numbers. In three steps, you get a detailed investment report displaying key investment metrics, such as gross rent multiplier, cap rate, net operating income, and cash flow.
+              Soundly invest using this <b>rental property calculator</b>. In three steps, you get a detailed investment report displaying key investment metrics, such as gross rent multiplier, cap rate, net operating income, and cash flow.
             </p>
             <section className="landing-steps">
               <h2>1. Purchase Information</h2>
@@ -71,6 +71,6 @@ function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
   } else {
     return <div>Failed to load.</div>
   }
-};
+}
 
 export default scriptLoader([`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&libraries=places`])(Landing);

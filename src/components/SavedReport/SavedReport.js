@@ -15,7 +15,7 @@ class SavedReport extends Component {
         this.state = {
             error: null
         }
-    };
+    }
 
     static contextType = SoundlyInvestContext;
 
@@ -52,7 +52,7 @@ class SavedReport extends Component {
                 this.context.setMiscellaneous(data.miscellaneous);
                 this.context.setVacancyRate(data.vacancy_rate);
             })
-            .catch(error => {
+            .catch(() => {
                 if (this._isMounted) {
                     this.setState({
                         error: 'Cannot get report at this time.'

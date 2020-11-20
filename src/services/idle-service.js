@@ -11,7 +11,7 @@ const IdleService = {
         _idleCallback = idleCallback
     },
     // called when a user interacts with the page
-    resetIdleTimer(ev) {
+    resetIdleTimer() {
         // console.info('event:', ev.type)
         // remove any timeouts as the user just interacted 
         clearTimeout(_timeoutId)

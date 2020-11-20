@@ -14,13 +14,13 @@ class Report extends Component {
         this.state = {
             error: null,
         }
-    };
+    }
 
     static contextType = SoundlyInvestContext;
 
     componentDidMount() {
         this.context.setPageReport(true);
-    };
+    }
 
     cellWarning() {
         let cashFlow = <CashFlow />;
@@ -29,11 +29,11 @@ class Report extends Component {
         } else {
             return '#ffffff';
         }
-    };
+    }
 
     componentWillUnmount() {
         this.context.setPageReport(false);
-    };
+    }
 
     // deletes selected report from the database
     handleDeleteReport(e) {

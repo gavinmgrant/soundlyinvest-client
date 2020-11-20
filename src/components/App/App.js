@@ -33,7 +33,7 @@ class App extends Component {
         userId: 1,
         userName: null,
       }
-  };
+  }
 
   handleSetReportId = id => {
     this.setState({
@@ -258,6 +258,6 @@ class App extends Component {
       </SoundlyInvestContext.Provider>
     );
   }
-};
+}
 
 export default App;

@@ -14,7 +14,7 @@ class Reports extends Component {
             error: null,
             isLoading: false,
         }
-    };
+    }
 
     static contextType = SoundlyInvestContext;
 
@@ -41,7 +41,7 @@ class Reports extends Component {
                     isLoading: false
                 });
             })
-            .catch(error => {
+            .catch(() => {
                 this.setState({
                     error: 'Cannot get reports at this time.'
                 });
