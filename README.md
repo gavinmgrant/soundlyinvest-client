@@ -23,20 +23,28 @@ View the server side code in this [GitHub repo](https://github.com/gavinmgrant/s
 ## User Flow
 
 Users arrive on a landing page that explains the app and directs users to log in.<br>
+![User flow screenshot of the SoundlyInvest app](./src/images/user-flow_1.png)
 
 After clicking the login button, the user can login using the login form or go to register by clicking the button in the header.<br>
+![User flow screenshot of the SoundlyInvest app](./src/images/user-flow_2.png)
 
 Users begin by entering a property address.<br>
+![User flow screenshot of the SoundlyInvest app](./src/images/user-flow_3.png)
 
 The first step is entering details about the property purchase.<br>
+![User flow screenshot of the SoundlyInvest app](./src/images/user-flow_4.png)
 
 The second step is entering potential income users can earn from rents.<br>
+![User flow screenshot of the SoundlyInvest app](./src/images/user-flow_5.png)
 
 The third step is entering potential expenses to operate this investment property.<br>
+![User flow screenshot of the SoundlyInvest app](./src/images/user-flow_6.png)
 
 Finally, a report is generating that provides investment metrics<br>
+![User flow screenshot of the SoundlyInvest app](./src/images/user-flow_7.png)
 
 Users can save this report, view saved reports, edit saved reports, or delete reports.<br>
+![User flow screenshot of the SoundlyInvest app](./src/images/user-flow_8.png)
 
 ## Available Scripts
 
