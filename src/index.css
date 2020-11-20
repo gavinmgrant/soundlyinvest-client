@@ -45,7 +45,8 @@ h3 {
 
 h1, h2, h3, h4 {
   font-family: 'Dosis', sans-serif;
-  font-weight: 600;
+  font-weight: bold;
+  color: #36008D;
 }
 
 p {
@@ -83,6 +84,21 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+input[type=text]:focus,
+input[type=number]:focus,
+select:focus {
+  background-color: #FFCD00;
+}
+
+/* change autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #36008D !important;
 }
 
 select {
@@ -178,16 +194,16 @@ ul {
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #36008D;
-  opacity: .7; /* Firefox */
+  color: #FE5E54;
+  opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #36008D;
+  color: #FE5E54;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-  color: #36008D;
+  color: #FE5E54;
 }
 
 @media screen and (min-width: 640px) {

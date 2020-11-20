@@ -82,17 +82,20 @@
 }
 
 @media screen and (min-width: 640px) {
-    .landing {
-        padding: 100px 20px 40px 20px; 
-        height: 100vh; 
-    }
+  .landing {
+      padding: 100px 20px 40px 20px; 
+      height: 100vh; 
+  }
 
-    .landing-steps {
-        margin: 20px;
-    }
+  .landing-steps {
+      margin: 20px;
+  }
 
-    .places-auto {
-        width: 70%;
-        max-width: 500px;
-    }
+  .places-auto {
+      width: 70%;
+      max-width: 500px;
+  }
+  .landing-login {
+    margin-top: 20px;
+  }
 }

@@ -50,7 +50,7 @@ function Landing( { isScriptLoaded, isScriptLoadSucceed }) {
               <h2>3. Monthly Expenses</h2>
               <p>Provide potential expenses to operate this investment property.</p>
             </section>
-            <Link to="/login">
+            <Link to="/login" className="landing-login">
               <input className="submit-button" type="submit" value="Login" />
             </Link>
           </>
