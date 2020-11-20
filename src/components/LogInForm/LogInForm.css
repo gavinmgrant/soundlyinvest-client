@@ -7,6 +7,14 @@
     padding: 90px 20px 20px 20px;
 }
 
+.register-link {
+    color: #393F4D !important;
+}
+
+.register-link:hover {
+    color: #36008D !important;
+}
+
 @media screen and (min-width: 640px) {
     .login-container {
         padding: 100px 20px 40px 20px; 

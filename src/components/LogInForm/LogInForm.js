@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import SoundlyInvestContext from '../../contexts/SoundlyInvestContext';
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
+import { Link } from "react-router-dom";
 import './LogInForm.css';
 
 export default class LoginForm extends Component {
@@ -63,7 +64,7 @@ export default class LoginForm extends Component {
             <section className='login-container'>
                 <h2>Login</h2>
                 <p>Please log in below to start a report or view your saved reports.</p>
-                <p>To register for an account, click the register button above.</p>
+                <Link to="/register" className="register-link">Register for an account here.</Link>
                 <section className="demo">
                     <p>To demo this site without registering, log in with these credentials:</p>
                     <p>username: <b>demo</b></p>
