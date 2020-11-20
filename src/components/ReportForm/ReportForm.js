@@ -47,7 +47,7 @@ class ReportForm extends Component {
             vacancy_rate: this.context.vacancyRate,
             user_id: 1
         }
-        fetch(`${config.API_ENDPOINT}/report`, {
+        fetch(`${config.API_ENDPOINT}/reports`, {
             method: 'POST',
             body: JSON.stringify(newReport),
             headers: {
