@@ -64,7 +64,6 @@ export default class LoginForm extends Component {
             <section className='login-container'>
                 <h2>Login</h2>
                 <p>Please log in below to start a report or view your saved reports.</p>
-                <Link to="/register" className="register-link">Register for an account here.</Link>
                 <section className="demo">
                     <p>To demo this site without registering, log in with these credentials:</p>
                     <p>username: <b>demo</b></p>
@@ -89,6 +88,7 @@ export default class LoginForm extends Component {
                     <button type='submit' className='submit-button'>
                         {!this.state.isLoading ? 'Login' : 'Loading...'}
                     </button>
+                    <Link to="/register" className="register-link">Register for an account here.</Link>
                     <div role='alert'>
                         {error ? <p className='error'>{error}</p> : ''}
                     </div>
