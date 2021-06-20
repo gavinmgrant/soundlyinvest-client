@@ -16,7 +16,7 @@ class Footer extends Component {
         </section>
         <section className='copyright'>
           <a 
-            href="https://gavingrant.dev/" 
+            href="https://gavingrant.co/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="copyright-link"
